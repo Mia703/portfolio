@@ -4,17 +4,119 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 	<title>Amya N. Moore</title>
 
 	<!-- faicon -->
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	
 	<!-- css -->
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="./styles/index.css">
+
 	<!-- jquery -->
+		<!-- jQuery CDNs -->
+	<!-- import jquery -->
+	<script src="https://code.jquery.com/jquery-3.6.1.js" 
+	integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+	<!-- import jquery ui -->
+	<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js" 
+	integrity="sha256-6XMVI0zB8cRzfZjqKcD01PBsAy3FlDASrlC8SxCpInY=" crossorigin="anonymous"></script>
 
 </head>
 <body>
-	
+
+	<div class="main-grid">
+
+		
+		<nav class="navigation" id="mobile">
+			<button class="line-container">
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+			</button>
+		</nav>
+
+		<nav class="navigaton" id="desktop">
+			<ol class="nav-list">
+				<li class="nav-item">
+					<a href="index.html">Home</a>
+				</li> |
+				<li class="nav-item">
+					<a href="#projects-cont">Projects</a>
+				</li> |
+				<li class="nav-item">
+					<a href="">About</a>
+				</li> |
+				<li class="nav-item">
+					<a href="">Photography & Art</a>
+				</li>
+			</ol>
+		</nav>
+		
+
+		<section class="main-landing-container">
+			<h1>
+				Amya N. Moore is an aspiring
+				<span class="colour">web developer</span>
+				and 
+				<span class="colour">web designer</span>
+				living in Baltimore, Maryland
+			</h1>
+		</section>
+
+		<section class="project-container" id="projects-cont">
+
+			<!-- a project -->
+			<div class="project">
+				<div class="project-img-container">
+					<a href="" class="project-link">
+						<img src="./assets/SpaceTourism.png" alt="">
+					</a>
+				</div>
+
+				<div class="project-description-container">
+					<h3>Multi-Page Space Tourism Site</h3>
+					<p>HTML/CSS</p>
+
+					<div class="github-container">
+						<a href="">
+							View on GitHub
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- a project -->
+			<div class="project">
+				<div class="project-img-container">
+					<a href="" class="project-link">
+						<img src="./assets/EasyBank.png" alt="">
+					</a>
+				</div>
+
+				<div class="project-description-container">
+					<h3>Easy Bank Landing Page</h3>
+					<p>HTML/CSS</p>
+
+					<div class="github-container">
+						<a href="">
+							View on GitHub
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<footer id="footer">
+			<div class="copy-right-container">
+
+			</div>
+		</footer>
+
+
+	</div>
+
 </body>
 </html>

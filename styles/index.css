@@ -1,0 +1,269 @@
+/* =================== imported fonts =================== */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+/* light 300; reg 400; medium 500; semibold 600 ; bold 700 */
+
+/* ---------- sub-header ---------- */
+
+/* =================== global variables =================== */
+:root {
+	--primary-bg-colour: #FBEDED;
+	--primary-font-colour: #34282C;
+	--primary-dark-brown: #584346;
+	--primary-dark-pink: #DF7C7D;
+	--std-transition: all .2s ease-in-out;
+}
+
+/* =================== reset default styles =================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =================== base page styles =================== */
+body {
+	font-family: 'Quicksand', sans-serif;
+	background-color: var(--primary-bg-colour);
+	color: var(--primary-font-colour);
+}
+
+.main-grid {
+	display: grid;
+	gap: 10px;
+}
+
+/* =================== font styles =================== */
+h1 {
+	font-weight: 400;
+	font-size: 3rem;
+}
+
+h2 {
+	font-weight: 500;
+	font-size: 2rem;
+}
+
+h3 {
+	font-weight: 500;
+	font-size: 1.75rem;
+}
+
+p {
+	font-weight: 400;
+	font-size: .875rem;
+}
+/* =================== constants =================== */
+.nav-list {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+
+	padding: .5rem;
+
+	font-size: 12px;
+}
+
+.nav-list li {
+	list-style: none;
+	margin: 0 .5rem;
+	padding: 0 .5rem;
+}
+
+.nav-list a {
+	text-decoration: none;
+	color: var(--primary-font-colour);
+	transition: var(--std-transition);
+}
+
+/* =================== main landing container =================== */
+.main-landing-container {
+	padding: 0 1rem;
+}
+
+/* =================== project container =================== */
+.project-container {
+	display: grid;
+	gap: 20px;
+	padding: 1rem;
+}
+
+.project-description-container * {
+	margin-bottom: .3rem;
+}
+
+.project-img-container {
+	margin-bottom: 1rem;
+}
+
+.project-link img {
+	max-width: 100%;
+	height: 100%;
+	transition: all 500ms ease-in-out;
+}
+
+.github-container a {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: .875rem;
+	color: var(--primary-font-colour);
+	transition: var(--std-transition);
+}
+
+/* =================== primary media query =================== */
+/* Small screens - MOBILE */
+@media only screen and (max-width: 40em) {
+	/* =================== grids =================== */
+	.main-grid {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	nav#desktop {
+		display: none;
+	}
+
+	nav#mobile {
+		grid-column: span 4;
+	}
+
+	.main-landing-container, 
+	.project-container, footer#footer {
+		grid-column: span 4;
+	}
+
+	/* =================== navigation =================== */
+	nav#mobile {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: center;
+
+		padding: .5rem;
+	}
+
+	.line-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: center;
+		padding: .3rem;
+
+		background-color: var(--primary-bg-colour);
+		border: none;
+	}
+
+	.line {
+		display: inline-block;
+		width: 2rem;
+		height: 2px;
+		background-color: var(--primary-dark-brown);
+	}
+	
+	.line:not(:last-child) {
+		margin-bottom: 6px;
+	}
+}
+
+/*------------------------------------------*/
+/* Medium screens - TABLET */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+	/* =================== grids =================== */
+	.main-grid {
+		grid-template-columns: repeat(6, 1fr);
+	}
+
+	nav#mobile {
+		display: none;
+	}
+
+	nav#desktop {
+		grid-column: span 6;
+	}
+
+	.main-landing-container, 
+	.project-container, footer#footer {
+		grid-column: span 6;
+	}
+
+	/* =================== navigation =================== */
+	.nav-list {
+		font-size: 14px;
+		padding: 1rem .5rem;
+	}
+}
+
+/*------------------------------------------*/
+/* Large screens - DESKTOP */
+@media only screen and (min-width: 64.063em) {
+	/* =================== grid =================== */
+	.main-grid {
+		grid-template-columns: repeat(12, 1fr);
+	}
+
+	#mobile.navigation {
+		display: none;
+	}
+
+	nav#desktop {
+		grid-column: span 12;
+	}
+
+	.main-landing-container, 
+	.project-container, footer#footer {
+		grid-column: span 12;
+	}
+
+	/* =================== navigation =================== */
+	.nav-list a:hover {
+		text-shadow: 0 0 .65px #333, 0 0 .65px #333;
+		transition: var(--std-transition);
+		cursor: pointer;
+	}
+
+	/* =================== main landing =================== */
+	.main-landing-container h1 {
+		font-size: 6.60rem;
+		line-height: 1.4em;
+	}
+
+	.colour {
+		transition: var(--std-transition);
+	}
+
+	.colour:hover {
+		color: var(--primary-dark-pink);
+		text-shadow: 0 0 .65px var(--primary-dark-pink),
+						0 0 .65px var(--primary-dark-pink);
+		transition: var(--std-transition);
+	}
+
+	/* =================== project contaienr =================== */
+	.project-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.project {
+		grid-column: span 1;
+		
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+
+	.project-img-container {
+		overflow: hidden;
+	}
+
+	.project-link img:hover {
+		cursor: pointer;
+		transform: scale(1.05);
+		transition: all 500ms ease-in-out;
+	}
+
+	.github-container a:hover {
+		color: green;
+		text-shadow: 0 0 .65px #333, 0 0 .65px #333;
+		transition: var(--std-transition);
+	}
+}

@@ -52,6 +52,7 @@ p {
 	font-weight: 400;
 	font-size: .875rem;
 }
+
 /* =================== constants =================== */
 .nav-list {
 	display: flex;
@@ -61,16 +62,16 @@ p {
 
 	padding: .5rem;
 
-	font-size: 12px;
+	font-size: 14px;
 }
 
-.nav-list li {
+.nav-item {
 	list-style: none;
 	margin: 0 .5rem;
 	padding: 0 .5rem;
 }
 
-.nav-list a {
+.nav-link {
 	text-decoration: none;
 	color: var(--primary-font-colour);
 	transition: var(--std-transition);
@@ -88,7 +89,7 @@ p {
 	padding: 1rem;
 }
 
-.project-description-container * {
+.project-description-container *:not(:last-child) {
 	margin-bottom: .3rem;
 }
 
@@ -102,12 +103,25 @@ p {
 	transition: all 500ms ease-in-out;
 }
 
-.github-container a {
+/* git hub link */
+.git-link, .project-link.mobile {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: .875rem;
 	color: var(--primary-font-colour);
 	transition: var(--std-transition);
+}
+
+.git-link .arrow {
+	font-size: .875rem;
+	margin: 0;
+}
+
+/* =================== footer =================== */
+footer#footer {
+	background-color: var(--primary-dark-brown);
+	text-align: center;
+	color: var(--primary-bg-colour);
 }
 
 /* =================== primary media query =================== */
@@ -127,7 +141,8 @@ p {
 	}
 
 	.main-landing-container, 
-	.project-container, footer#footer {
+	.project-container, 
+	footer#footer {
 		grid-column: span 4;
 	}
 
@@ -162,6 +177,50 @@ p {
 	.line:not(:last-child) {
 		margin-bottom: 6px;
 	}
+
+	/* =================== main landing =================== */
+	.main-landing-container h1 {
+		font-size: 3.2em;
+		line-height: 1.4em;
+	}
+
+	.colour {
+		transition: var(--std-transition);
+	}
+
+	/* =================== project container =================== */
+	.project-container {
+		grid-template-columns: repeat(1, 1fr);
+		gap: 3rem;
+	}
+
+	.project {
+		grid-column: span 1;
+		
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+
+	.github-container a {
+		margin-right: 1rem;
+	}
+
+	/* disable image link */
+	.project-link.desktop {
+		pointer-events: none;
+	}
+
+	/* git hub link */
+	.git-link, .project-link.mobile {
+		text-decoration: underline;
+	}
+
+	/* =================== footer =================== */
+	footer#footer {
+		padding: 1rem;
+	}
 }
 
 /*------------------------------------------*/
@@ -181,14 +240,59 @@ p {
 	}
 
 	.main-landing-container, 
-	.project-container, footer#footer {
+	.project-container, 
+	footer#footer {
 		grid-column: span 6;
 	}
 
 	/* =================== navigation =================== */
 	.nav-list {
-		font-size: 14px;
-		padding: 1rem .5rem;
+		font-size: 16px;
+		padding: 1.5rem .5rem;
+	}
+
+	/* =================== main landing =================== */
+	.main-landing-container h1 {
+		font-size: 5.4rem;
+		line-height: 1.4em;
+	}
+
+	.colour {
+		transition: var(--std-transition);
+	}
+
+	/* =================== project contaienr =================== */
+	.project-container {
+		grid-template-columns: repeat(1, 1fr);
+		gap: 4rem;
+	}
+
+	.project {
+		grid-column: span 1;
+		
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+
+	.github-container a {
+		margin-right: 1rem;
+	}
+
+	/* disable image link */
+	.project-link.desktop {
+		pointer-events: none;
+	}
+
+	/* git hub link */
+	.git-link, .project-link.mobile {
+		text-decoration: underline;
+	}
+
+	/* =================== footer =================== */
+	footer#footer {
+		padding: .5rem;
 	}
 }
 
@@ -209,15 +313,17 @@ p {
 	}
 
 	.main-landing-container, 
-	.project-container, footer#footer {
+	.project-container, 
+	footer#footer {
 		grid-column: span 12;
 	}
 
 	/* =================== navigation =================== */
-	.nav-list a:hover {
-		text-shadow: 0 0 .65px #333, 0 0 .65px #333;
-		transition: var(--std-transition);
+	.nav-link:hover {
 		cursor: pointer;
+		color: var(--primary-font-colour);
+		text-shadow: 0 0 .65px var(--primary-font-colour);
+		transition: var(--std-transition);
 	}
 
 	/* =================== main landing =================== */
@@ -227,13 +333,6 @@ p {
 	}
 
 	.colour {
-		transition: var(--std-transition);
-	}
-
-	.colour:hover {
-		color: var(--primary-dark-pink);
-		text-shadow: 0 0 .65px var(--primary-dark-pink),
-						0 0 .65px var(--primary-dark-pink);
 		transition: var(--std-transition);
 	}
 
@@ -255,15 +354,24 @@ p {
 		overflow: hidden;
 	}
 
+	.project-link.mobile {
+		display: none;
+	}
+
 	.project-link img:hover {
 		cursor: pointer;
 		transform: scale(1.05);
 		transition: all 500ms ease-in-out;
 	}
 
-	.github-container a:hover {
-		color: green;
-		text-shadow: 0 0 .65px #333, 0 0 .65px #333;
+	.git-link:hover {
+		color: var(--primary-dark-pink);
+		text-shadow: 0 0 .65px var(--primary-dark-pink);
 		transition: var(--std-transition);
+	}
+
+	/* =================== footer =================== */
+	footer#footer {
+		padding: .5rem;
 	}
 }

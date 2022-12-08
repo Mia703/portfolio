@@ -13,6 +13,9 @@
 	<!-- css -->
 	<link rel="stylesheet" href="./styles/index.css">
 
+	<!-- google icons -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+
 	<!-- jquery -->
 		<!-- jQuery CDNs -->
 	<!-- import jquery -->
@@ -40,16 +43,16 @@
 		<nav class="navigaton" id="desktop">
 			<ol class="nav-list">
 				<li class="nav-item">
-					<a href="index.html">Home</a>
+					<a href="index.html" class="nav-link">Home</a>
 				</li> |
 				<li class="nav-item">
-					<a href="#projects-cont">Projects</a>
+					<a href="#projects-cont" class="nav-link">Projects</a>
 				</li> |
 				<li class="nav-item">
-					<a href="">About</a>
+					<a href="#" class="nav-link">About</a>
 				</li> |
 				<li class="nav-item">
-					<a href="">Photography & Art</a>
+					<a href="#" class="nav-link">Photography & Art</a>
 				</li>
 			</ol>
 		</nav>
@@ -58,8 +61,7 @@
 		<section class="main-landing-container">
 			<h1>
 				Amya N. Moore is an aspiring
-				<span class="colour">web developer</span>
-				and 
+				<span class="colour">web developer</span> and 
 				<span class="colour">web designer</span>
 				living in Baltimore, Maryland
 			</h1>
@@ -67,10 +69,10 @@
 
 		<section class="project-container" id="projects-cont">
 
-			<!-- a project -->
+			<!-- a project Space Tourism-->
 			<div class="project">
 				<div class="project-img-container">
-					<a href="" class="project-link">
+					<a href="https://mia703.github.io/FrontEndMentor---Space-Tourism-Website/" class="project-link desktop" target="_blank">
 						<img src="./assets/SpaceTourism.png" alt="">
 					</a>
 				</div>
@@ -78,19 +80,23 @@
 				<div class="project-description-container">
 					<h3>Multi-Page Space Tourism Site</h3>
 					<p>HTML/CSS</p>
-
 					<div class="github-container">
-						<a href="">
+						<a href="https://mia703.github.io/FrontEndMentor---Space-Tourism-Website/" class="project-link mobile" target="_blank">
+							View Project
+						</a>
+
+						<a href="https://github.com/Mia703/FrontEndMentor---Space-Tourism-Website" class="git-link" target="_blank">
 							View on GitHub
+							<span class="material-symbols-outlined arrow">north_east</span>
 						</a>
 					</div>
 				</div>
 			</div>
 
-			<!-- a project -->
+			<!-- a project Easy Bank-->
 			<div class="project">
 				<div class="project-img-container">
-					<a href="" class="project-link">
+					<a href="https://mia703.github.io/FrontEndMentor--EasyBank-Landing/" class="project-link desktop" target="_blank">
 						<img src="./assets/EasyBank.png" alt="">
 					</a>
 				</div>
@@ -100,8 +106,13 @@
 					<p>HTML/CSS</p>
 
 					<div class="github-container">
-						<a href="">
+						<a href="https://mia703.github.io/FrontEndMentor--EasyBank-Landing/" class="project-link mobile" target="_blank">
+							View Project
+						</a>
+
+						<a href="https://github.com/Mia703/FrontEndMentor--Re-EasyBank" class="git-link" target="_blank">
 							View on GitHub
+							<span class="material-symbols-outlined arrow">north_east</span>
 						</a>
 					</div>
 				</div>
@@ -111,12 +122,12 @@
 
 		<footer id="footer">
 			<div class="copy-right-container">
-
+				<p>© 2022 Amya N. Moore</p>
 			</div>
 		</footer>
 
 
 	</div>
-
+	<script src="./actions/index.js"></script>
 </body>
 </html>

@@ -82,6 +82,10 @@ p {
 	padding: 0 1rem;
 }
 
+.main-landing-container span {
+	color: var(--primary-dark-pink);
+}
+
 /* =================== project container =================== */
 .project-container {
 	display: grid;

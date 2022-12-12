@@ -30,50 +30,134 @@
 <body>
 
 	<div class="main-grid">
-
 		
+		<div class="navigation-header mobile">
+			<div class="logo-container">
+				<h1>
+					<a href="index.html">ANM</a>
+				</h1>
+			</div>
+
+			<div class="toggle-container open">
+				<button class="menu-toggle open">
+					<img src="./assets/icon-menu.svg" alt="open button">
+				</button>
+			</div>
+		</div>
+
+		<section id="overlay"></section>
+
 		<nav class="navigation" id="mobile">
-			<button class="line-container">
-				<div class="line"></div>
-				<div class="line"></div>
-				<div class="line"></div>
-			</button>
+			<div class="toggle-container exit">
+				<button class="menu-toggle close">
+					<img src="./assets/icon-menu-close.svg" alt="close button">
+				</button>
+			</div>
+
+			<ul class="nav-list mobile">
+				<li class="nav-item">
+					<a href="index.html" class="nav-link">Home</a>
+				</li>
+				<li class="nav-item">
+					<a href="#skills-ct" class="nav-link">Skills</a>
+				</li>
+				<li class="nav-item">
+					<a href="#projects-ct" class="nav-link">Projects</a>
+				</li>
+				<li class="nav-item">
+					<a href="#about-ct" class="nav-link">About</a>
+				</li>
+			</ul>
 		</nav>
 
 		<nav class="navigaton" id="desktop">
-			<ol class="nav-list">
+			<div class="logo-container">
+				<h1>
+					<a href="index.html">ANM</a>
+				</h1>
+			</div>
+
+			<ul class="nav-list">
 				<li class="nav-item">
 					<a href="index.html" class="nav-link">Home</a>
-				</li> |
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">Skills</a>
+				</li>
 				<li class="nav-item">
 					<a href="#projects-cont" class="nav-link">Projects</a>
-				</li> |
+				</li>
 				<li class="nav-item">
 					<a href="#" class="nav-link">About</a>
-				</li> |
-				<li class="nav-item">
-					<a href="#" class="nav-link">Photography & Art</a>
 				</li>
-			</ol>
+			</ul>
+
+			<div class="socials-container">
+				<!-- insert socials icon: linkedIn?, github? -->
+
+				<button>Let's Connect</button>
+			</div>
 		</nav>
 		
+		<section class="header-container">
+			<h3>Hello, my name is Amya Moore and I am a</h3>
+			<h1>Web Designer and Developer</h1>
+			<h3>from Balitmore, Maryland.</h3>
+			<p>Welcome to my portfolio.</p>
 
-		<section class="main-landing-container">
-			<h1>
-				Amya N. Moore is an aspiring
-				<span class="colour">web developer</span> and 
-				<span class="colour">web designer</span>
-				living in Baltimore, Maryland.
-			</h1>
+			<div class="header-btns-container">
+				<button>
+					<a href="#skills-ct">My Skills</a>
+				</button>
+				<button>
+					<a href="#projects-ct">My Projects</a>
+				</button>
+			</div>
 		</section>
 
-		<section class="project-container" id="projects-cont">
+		<section class="skills-container" id="skills-ct">
+			<h2>Skills</h2>
 
+			<div class="skills mobile">
+				<!-- line chart -->
+			</div>
+
+			<div class="skills desktop">
+				<!-- half circle graph -->
+			</div>
+		</section>
+
+		<section class="project-container" id="projects-ct">
+			<h2>Projects</h2>
+
+			<!-- a project news homepage -->
+			<div class="project">
+				<div class="project-img-container">
+					<a href="" class="project-link desktop" target="_blank">
+						<img src="./assets/project images/NewsHomepage.png" alt="">
+					</a>
+				</div>
+
+				<div class="project-description-container">
+					<h3>News Homepage Challenge</h3>
+					<p>HTML/CSS</p>
+					<div class="github-container">
+						<a href="" class="project-link mobile" target="_blank">
+							View Project
+						</a>
+
+						<a href="" class="git-link" target="_blank">
+							View on GitHub
+							<span class="material-symbols-outlined arrow">north_east</span>
+						</a>
+					</div>
+				</div>
+			</div>
 			<!-- a project testimonal grid-->
 			<div class="project">
 				<div class="project-img-container">
 					<a href="https://mia703.github.io/FrontEnd-Mentor----Testimonials-Grid/" class="project-link desktop" target="_blank">
-						<img src="./assets/TestimonialsGrid.png" alt="">
+						<img src="./assets/project images/TestimonialsGrid.png" alt="">
 					</a>
 				</div>
 
@@ -97,7 +181,7 @@
 			<div class="project">
 				<div class="project-img-container">
 					<a href="https://mia703.github.io/FrontEndMentor---Space-Tourism-Website/" class="project-link desktop" target="_blank">
-						<img src="./assets/SpaceTourism.png" alt="">
+						<img src="./assets/project images/SpaceTourism.png" alt="">
 					</a>
 				</div>
 
@@ -121,7 +205,7 @@
 			<div class="project">
 				<div class="project-img-container">
 					<a href="https://mia703.github.io/FrontEndMentor--EasyBank-Landing/" class="project-link desktop" target="_blank">
-						<img src="./assets/EasyBank.png" alt="">
+						<img src="./assets/project images/EasyBank.png" alt="">
 					</a>
 				</div>
 
@@ -143,10 +227,23 @@
 			</div>
 		</section>
 
+		<section class="about-container" id="about-ct">
+			<div class="my-img">
+				<img src="" alt="">
+			</div>
+
+			<div class="abt-me-container">
+				<h2>About Me</h2>
+				<p></p>
+				<div class="socials">
+
+				</div>
+			</div>
+		</section>
+
 
 		<footer id="footer">
 			<div class="copy-right-container">
-				<p>© 2022 Amya N. Moore</p>
 			</div>
 		</footer>
 

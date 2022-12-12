@@ -29,7 +29,6 @@ body {
 
 .main-grid {
 	display: grid;
-	gap: 10px;
 }
 
 /* =================== font styles =================== */
@@ -54,328 +53,142 @@ p {
 }
 
 /* =================== constants =================== */
-.nav-list {
+.menu-toggle {
+	padding: .2rem;
+	background-color: var(--primary-bg-colour);
+	border: none;
+}
+
+/* ---------- mobile navigation ---------- */
+#overlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+
+	background-color: rgba(88, 67, 70, 70%);
+	width: 100%;
+	height: 100%;
+
+	display: none;
+}
+
+#mobile.navigation {
+	position: fixed;
+	top: 0;
+	right: 0;
+
+	background-color: var(--primary-bg-colour);
+	width: 20rem;
+	height: 40rem;
+
+	padding: 1rem;
+
+	display: none;
+}
+
+.toggle-container.exit {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
-	align-items: center;
+}
 
-	padding: .5rem;
+.nav-list.mobile .nav-item {
+	margin-left: 2rem;
+}
 
-	font-size: 14px;
+.nav-list.mobile .nav-item:first-child {
+	margin-top: 5rem;
+}
+
+.nav-list.mobile .nav-item:not(:last-child) {
+	margin-bottom: 2rem;
 }
 
 .nav-item {
 	list-style: none;
-	margin: 0 .5rem;
-	padding: 0 .5rem;
 }
 
 .nav-link {
 	text-decoration: none;
 	color: var(--primary-font-colour);
-	transition: var(--std-transition);
 }
 
-/* =================== main landing container =================== */
-.main-landing-container {
-	padding: 0 1rem;
-}
-
-.main-landing-container span {
-	color: var(--primary-dark-pink);
-}
-
-/* =================== project container =================== */
+/* ---------- project container ---------- */
 .project-container {
 	display: grid;
-	gap: 20px;
-	padding: 1rem;
+	gap: 15px;
 }
 
-.project-description-container *:not(:last-child) {
-	margin-bottom: .3rem;
-}
-
-.project-img-container {
-	margin-bottom: 1rem;
-}
-
-.project-link img {
-	max-width: 100%;
-	height: 100%;
-	transition: all 500ms ease-in-out;
-}
-
-/* git hub link */
-.git-link, .project-link.mobile {
-	text-decoration: none;
-	text-transform: uppercase;
-	font-size: .875rem;
-	color: var(--primary-font-colour);
-	transition: var(--std-transition);
-}
-
-.git-link .arrow {
-	font-size: .875rem;
-	margin: 0;
-}
-
-/* =================== footer =================== */
-footer#footer {
-	background-color: var(--primary-dark-brown);
-	text-align: center;
-	color: var(--primary-bg-colour);
-}
-
-/* =================== primary media query =================== */
-/* Small screens - MOBILE */
+/* =================== MOBILE =================== */
 @media only screen and (max-width: 40em) {
-	/* =================== grids =================== */
 	.main-grid {
 		grid-template-columns: repeat(4, 1fr);
-	}
-
-	nav#desktop {
-		display: none;
-	}
-
-	nav#mobile {
-		grid-column: span 4;
-	}
-
-	.main-landing-container, 
-	.project-container, 
-	footer#footer {
-		grid-column: span 4;
-	}
-
-	/* =================== navigation =================== */
-	nav#mobile {
-		display: flex;
-		flex-direction: row;
-		justify-content: flex-end;
-		align-items: center;
-
-		padding: .5rem;
-	}
-
-	.line-container {
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
-		align-items: center;
-		padding: .3rem;
-
-		background-color: var(--primary-bg-colour);
-		border: none;
-	}
-
-	.line {
-		display: inline-block;
-		width: 2rem;
-		height: 2px;
-		background-color: var(--primary-dark-brown);
-	}
-	
-	.line:not(:last-child) {
-		margin-bottom: 6px;
-	}
-
-	/* =================== main landing =================== */
-	.main-landing-container h1 {
-		font-size: 3.2em;
-		line-height: 1.4em;
-	}
-
-	.colour {
-		transition: var(--std-transition);
-	}
-
-	/* =================== project container =================== */
-	.project-container {
-		grid-template-columns: repeat(1, 1fr);
-		gap: 3rem;
-	}
-
-	.project {
-		grid-column: span 1;
-		
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		align-items: flex-start;
-	}
-
-	.github-container a {
-		margin-right: 1rem;
-	}
-
-	/* disable image link */
-	.project-link.desktop {
-		pointer-events: none;
-	}
-
-	/* git hub link */
-	.git-link, .project-link.mobile {
-		text-decoration: underline;
-	}
-
-	/* =================== footer =================== */
-	footer#footer {
 		padding: 1rem;
 	}
-}
 
-/*------------------------------------------*/
-/* Medium screens - TABLET */
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {
-	/* =================== grids =================== */
-	.main-grid {
-		grid-template-columns: repeat(6, 1fr);
+	.main-grid section {
+		grid-column: span 4;
 	}
 
-	nav#mobile {
+	/* hide desktop navigation */
+	#desktop.navigaton {
 		display: none;
 	}
 
-	nav#desktop {
-		grid-column: span 6;
-	}
+	/* ---------- mobile nav header ---------- */
+	.navigation-header.mobile {
+		grid-column: span 4;
 
-	.main-landing-container, 
-	.project-container, 
-	footer#footer {
-		grid-column: span 6;
-	}
-
-	/* =================== navigation =================== */
-	.nav-list {
-		font-size: 16px;
-		padding: 1.5rem .5rem;
-	}
-
-	/* =================== main landing =================== */
-	.main-landing-container h1 {
-		font-size: 5.4rem;
-		line-height: 1.4em;
-	}
-
-	.colour {
-		transition: var(--std-transition);
-	}
-
-	/* =================== project contaienr =================== */
-	.project-container {
-		grid-template-columns: repeat(1, 1fr);
-		gap: 4rem;
-	}
-
-	.project {
-		grid-column: span 1;
-		
 		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		align-items: flex-start;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
 	}
 
-	.github-container a {
-		margin-right: 1rem;
-	}
-
-	/* disable image link */
-	.project-link.desktop {
-		pointer-events: none;
-	}
-
-	/* git hub link */
-	.git-link, .project-link.mobile {
-		text-decoration: underline;
-	}
-
-	/* =================== footer =================== */
-	footer#footer {
-		padding: .5rem;
-	}
-}
-
-/*------------------------------------------*/
-/* Large screens - DESKTOP */
-@media only screen and (min-width: 64.063em) {
-	/* =================== grid =================== */
-	.main-grid {
-		grid-template-columns: repeat(12, 1fr);
-	}
-
-	#mobile.navigation {
-		display: none;
-	}
-
-	nav#desktop {
-		grid-column: span 12;
-	}
-
-	.main-landing-container, 
-	.project-container, 
-	footer#footer {
-		grid-column: span 12;
-	}
-
-	/* =================== navigation =================== */
-	.nav-link:hover {
-		cursor: pointer;
+	/* logo container */
+	.logo-container a {
+		text-decoration: none;
 		color: var(--primary-font-colour);
-		text-shadow: 0 0 .65px var(--primary-font-colour);
-		transition: var(--std-transition);
 	}
 
-	/* =================== main landing =================== */
-	.main-landing-container h1 {
-		font-size: 6.60rem;
-		line-height: 1.4em;
+	/* ---------- header container ---------- */
+	.header-container {
+		text-align: center;
+		margin: 5rem 0;
 	}
 
-	.colour {
-		transition: var(--std-transition);
-	}
+	.header-btns-container {
+		margin-top: 3rem;
 
-	/* =================== project contaienr =================== */
-	.project-container {
-		grid-template-columns: repeat(2, 1fr);
-	}
-
-	.project {
-		grid-column: span 1;
-		
 		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		align-items: flex-start;
+		flex-direction: row;
+		justify-content: space-evenly;
+		align-items: center;
 	}
 
-	.project-img-container {
-		overflow: hidden;
+	.header-btns-container button {
+		background-color: var(--primary-dark-brown);
+		border: none;
+		border-radius: 1000px;
+		width: 9rem;
+		padding: 1rem 0;
 	}
 
-	.project-link.mobile {
-		display: none;
+	.header-btns-container button a {
+		color: white;
+		text-transform: uppercase;
+		text-decoration: none;
 	}
 
-	.project-link img:hover {
-		cursor: pointer;
-		transform: scale(1.05);
-		transition: all 500ms ease-in-out;
+	/* ---------- project container ---------- */
+	.project-container h2 {
+		text-transform: uppercase;
 	}
 
-	.git-link:hover {
-		color: var(--primary-dark-pink);
-		text-shadow: 0 0 .65px var(--primary-dark-pink);
-		transition: var(--std-transition);
-	}
 
-	/* =================== footer =================== */
-	footer#footer {
-		padding: .5rem;
+
+	.project-img-container img {
+		width: 100%;
+		border: 4px solid var(--primary-dark-pink);
 	}
 }

@@ -26,6 +26,9 @@
 	<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js" 
 	integrity="sha256-6XMVI0zB8cRzfZjqKcD01PBsAy3FlDASrlC8SxCpInY=" crossorigin="anonymous"></script>
 
+	<!-- chart js -->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
 </head>
 <body>
 
@@ -48,7 +51,7 @@
 		<section id="overlay"></section>
 
 		<nav class="navigation" id="mobile">
-			<div class="toggle-container exit">
+			<div class="toggle-container close">
 				<button class="menu-toggle close">
 					<img src="./assets/icon-menu-close.svg" alt="close button">
 				</button>
@@ -65,7 +68,7 @@
 					<a href="#projects-ct" class="nav-link">Projects</a>
 				</li>
 				<li class="nav-item">
-					<a href="#about-ct" class="nav-link">About</a>
+					<a href="#about-ct" class="nav-link">About Me</a>
 				</li>
 			</ul>
 		</nav>
@@ -100,9 +103,13 @@
 		</nav>
 		
 		<section class="header-container">
-			<h3>Hello, my name is Amya Moore and I am a</h3>
-			<h1>Web Designer and Developer</h1>
-			<h3>from Balitmore, Maryland.</h3>
+			<h3>
+				Hello, my name is Amya Moore and I am a 
+				<br>
+				<span class="emp">web designer & developer</span>
+				<br>
+				from Balitmore, Maryland.
+			</h3>
 			<p>Welcome to my portfolio.</p>
 
 			<div class="header-btns-container">
@@ -116,43 +123,65 @@
 		</section>
 
 		<section class="skills-container" id="skills-ct">
-			<h2>Skills</h2>
+			<h2 class="emp">Skills</h2>
 
-			<div class="skills mobile">
-				<!-- line chart -->
+			<div class="my-skills" id="mobile">
+
+				<div class="skill">
+					<p>HTML</p>
+					<div class="bar outer">
+						<div class="bar inner" id="html">90%</div>
+					</div>
+				</div>
+
+				<div class="skill">
+					<p>CSS</p>
+					<div class="bar outer">
+						<div class="bar inner" id="css">70%</div>
+					</div>
+				</div>
+
+				<div class="skill">
+					<p>JS & jQuery</p>
+					<div class="bar outer">
+						<div class="bar inner" id="jq">40%</div>
+					</div>
+				</div>
 			</div>
 
-			<div class="skills desktop">
-				<!-- half circle graph -->
+			<div class="my-skills" id="desktop">
+
 			</div>
 		</section>
 
 		<section class="project-container" id="projects-ct">
-			<h2>Projects</h2>
+			<h2 class="emp">Projects</h2>
 
 			<!-- a project news homepage -->
 			<div class="project">
 				<div class="project-img-container">
-					<a href="" class="project-link desktop" target="_blank">
+					<a href="https://mia703.github.io/FrontEnd-Mentor--News-Homepage/" class="project-link desktop" target="_blank">
 						<img src="./assets/project images/NewsHomepage.png" alt="">
 					</a>
 				</div>
 
 				<div class="project-description-container">
 					<h3>News Homepage Challenge</h3>
-					<p>HTML/CSS</p>
+					<p>HTML/CSS/jQuery</p>
 					<div class="github-container">
-						<a href="" class="project-link mobile" target="_blank">
+						<a href="https://mia703.github.io/FrontEnd-Mentor--News-Homepage/" class="project-link mobile" target="_blank">
 							View Project
+							<span class="material-symbols-outlined arrow">north_east</span>
 						</a>
 
-						<a href="" class="git-link" target="_blank">
+						<a href="https://github.com/Mia703/FrontEnd-Mentor--News-Homepage" class="git-link" target="_blank">
 							View on GitHub
 							<span class="material-symbols-outlined arrow">north_east</span>
 						</a>
 					</div>
 				</div>
 			</div>
+
 			<!-- a project testimonal grid-->
 			<div class="project">
 				<div class="project-img-container">
@@ -167,6 +196,7 @@
 					<div class="github-container">
 						<a href="https://mia703.github.io/FrontEnd-Mentor----Testimonials-Grid/" class="project-link mobile" target="_blank">
 							View Project
+							<span class="material-symbols-outlined arrow">north_east</span>
 						</a>
 
 						<a href="https://github.com/Mia703/FrontEnd-Mentor----Testimonials-Grid" class="git-link" target="_blank">
@@ -191,6 +221,7 @@
 					<div class="github-container">
 						<a href="https://mia703.github.io/FrontEndMentor---Space-Tourism-Website/" class="project-link mobile" target="_blank">
 							View Project
+							<span class="material-symbols-outlined arrow">north_east</span>
 						</a>
 
 						<a href="https://github.com/Mia703/FrontEndMentor---Space-Tourism-Website" class="git-link" target="_blank">
@@ -216,6 +247,7 @@
 					<div class="github-container">
 						<a href="https://mia703.github.io/FrontEndMentor--EasyBank-Landing/" class="project-link mobile" target="_blank">
 							View Project
+							<span class="material-symbols-outlined arrow">north_east</span>
 						</a>
 
 						<a href="https://github.com/Mia703/FrontEndMentor--Re-EasyBank" class="git-link" target="_blank">

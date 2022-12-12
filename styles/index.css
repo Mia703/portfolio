@@ -1,7 +1,8 @@
 /* =================== imported fonts =================== */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 /* light 300; reg 400; medium 500; semibold 600 ; bold 700 */
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Sansita+Swashed:wght@500&display=swap');
+/* medium 500 */
 /* ---------- sub-header ---------- */
 
 /* =================== global variables =================== */
@@ -15,12 +16,17 @@
 
 /* =================== reset default styles =================== */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 /* =================== base page styles =================== */
+html {
+	scroll-behavior: smooth;
+	/* may not work in safari or windows; cannot control speed */
+}
+
 body {
 	font-family: 'Quicksand', sans-serif;
 	background-color: var(--primary-bg-colour);
@@ -34,22 +40,27 @@ body {
 /* =================== font styles =================== */
 h1 {
 	font-weight: 400;
-	font-size: 3rem;
+	font-size: 40px;
 }
 
 h2 {
 	font-weight: 500;
-	font-size: 2rem;
+	font-size: 30px;
 }
 
 h3 {
 	font-weight: 500;
-	font-size: 1.75rem;
+	font-size: 20px;
 }
 
 p {
 	font-weight: 400;
-	font-size: .875rem;
+	font-size: 16px;
+}
+
+.emp {
+	font-family: 'Sansita Swashed', cursive;
+	font-size: 30px;
 }
 
 /* =================== constants =================== */
@@ -78,18 +89,22 @@ p {
 	right: 0;
 
 	background-color: var(--primary-bg-colour);
-	width: 20rem;
-	height: 40rem;
-
+	width: 17rem;
+	height: 35rem;
+	border-radius: 10px 0 10px 10px ;
 	padding: 1rem;
 
 	display: none;
 }
 
-.toggle-container.exit {
+.toggle-container.close {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
+}
+
+.menu-toggle.close:hover, .menu-toggle.open:hover {
+	cursor: pointer;
 }
 
 .nav-list.mobile .nav-item {
@@ -116,14 +131,13 @@ p {
 /* ---------- project container ---------- */
 .project-container {
 	display: grid;
-	gap: 15px;
 }
 
 /* =================== MOBILE =================== */
 @media only screen and (max-width: 40em) {
 	.main-grid {
 		grid-template-columns: repeat(4, 1fr);
-		padding: 1rem;
+		padding: 1.5rem;
 	}
 
 	.main-grid section {
@@ -154,7 +168,7 @@ p {
 	/* ---------- header container ---------- */
 	.header-container {
 		text-align: center;
-		margin: 5rem 0;
+		margin: 50vw 0;
 	}
 
 	.header-btns-container {
@@ -180,15 +194,113 @@ p {
 		text-decoration: none;
 	}
 
-	/* ---------- project container ---------- */
-	.project-container h2 {
-		text-transform: uppercase;
+	/* ---------- skills container ---------- */
+	.skills-container {
+		margin-bottom: 6rem;
 	}
 
+	.skills-container h2 {
+		margin-bottom: 1rem;
+	}
 
+	/* hide desktop skills */
+	#desktop.my-skills {
+		display: none;
+	}
 
-	.project-img-container img {
+	#mobile.my-skills {
+		margin-left: 1rem;
+	}
+
+	.skill:not(:last-child) {
+		margin-bottom: 1rem;
+	}
+
+	.skill p {
+		margin-bottom: .5rem;
+	}
+
+	.bar.outer {
 		width: 100%;
-		border: 4px solid var(--primary-dark-pink);
+		background-color: var(--primary-bg-colour);
+	}
+
+	.bar.inner {
+		text-align: right;
+		padding: 5px 10px;
+		color: white;
+	}
+
+	#html {
+		width: 90%;
+		background-color: var(--primary-dark-pink);
+	}
+
+	#css {
+		width: 70%;
+		background-color: var(--primary-dark-pink);
+	}
+
+	#jq {
+		width: 40%;
+		background-color: var(--primary-dark-pink);
+	}
+	
+	/* ---------- project container ---------- */
+	.project-container {
+		grid-template-columns: 1fr;
+		margin-bottom: 6rem;
+	}
+
+	.project-container h2 {
+		margin-bottom: 1.5rem;
+	}
+
+	.project {
+		grid-column: span 1;
+	}
+
+	.project:not(:last-child) {
+		margin-bottom: 4rem;
+	}
+
+	.project-img-container {
+		margin-bottom: .5rem;
+	}
+
+	/* disable a tag */
+	.project-link.desktop {
+		pointer-events: none;
+	}
+
+	.project-link.desktop img {
+		width: 100%;
+	}
+
+	/* project description container */
+	.project-description-container h3, .project-description-container p {
+		margin-bottom: .3rem;
+	}
+
+	/* container that has the links */
+	.github-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.github-container a {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+
+		text-decoration: none;
+		color: var(--primary-dark-pink);
+	}
+
+	.github-container span {
+		font-size: 14px;
 	}
 }

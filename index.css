@@ -19,6 +19,10 @@
 }
 
 /* =================== base page styles =================== */
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background-color: var(--primary-bg-colour);
 	color: var(--primary-font-colour);
@@ -49,7 +53,7 @@ body {
 	padding: .3rem .8rem;
 }
 
-/* for buttons with a tags */
+/* for buttons with <a> tags */
 .button-link {
 	font-family: 'Unica One', cursive;
 	font-size: 24px;
@@ -58,7 +62,6 @@ body {
 	color: var(--primary-font-colour);
 	text-decoration: none;
 }
-
 
 h1 {
 	font-family: 'Unica One', cursive;
@@ -94,14 +97,13 @@ p {
 /* ---------- navigation ---------- */
 nav.navigation {
 	position: fixed;
-	top: 4rem;
-	right: 1rem;
-	left: 1rem;
-	padding: 1.5rem;
-	background-color: var(--primary-accent-light-pink);
-	border-radius: 20px;
+	top: 0;
+	width: 100%;
+	height: 100%;
 
-	display: none;
+	z-index: 2;
+	padding: 0.5rem;
+	background-color: rgba(88, 67, 70, 95%);
 }
 
 .nav-list {
@@ -114,10 +116,11 @@ nav.navigation {
 
 .nav-link {
 	text-decoration: none;
-	color: var(--primary-font-colour);
+	color: white;
+	text-transform: uppercase;
 }
 
-/* ---------- nav header ---------- */
+/* ---------- nav header (desktop and mobile) ---------- */
 .nav-header {
 	display: flex;
 	flex-direction: row;
@@ -132,23 +135,28 @@ nav.navigation {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-
-	border-radius: 10000px;
-	width: 3rem;
-	height: 3rem;
-	background-color: var(--primary-bg-colour);
-	border: 2px solid var(--primary-accent-pink);
 }
 
-.menu-toggle img {
+.menu-toggle.open {
+	padding: 1rem;
+	background-color: var(--primary-bg-colour);
+	border: none;
+}
+
+.menu-toggle.close {
+	padding: 1rem;
+	background: none;
+	border: none;
+}
+
+.menu-toggle.open img {
 	position: absolute;
 	width: 1.5rem;
 }
 
-.menu-toggle #close {
-	display: none;
+.menu-toggle.close img {
+	/* TODO: find svg of open and close btns, can't change color of img */
 }
-
 
 /* ---------- main section ---------- */
 #main {
@@ -180,14 +188,8 @@ nav.navigation {
 	display: grid;
 }
 
-.pj-img {
-	width: 30rem;
-	height: 30rem;
-	overflow: hidden;
-	background-color: var(--primary-accent-light-pink);
-	
-	display: flex;
-	justify-content: center;
+.pj-img img {
+	width: 100%;
 }
 
 .pj-text {
@@ -226,7 +228,7 @@ nav.navigation {
 
 #email {
 	display: block;
-	color: var(--primary-font-colour);
+	color: var(--primary-accent-pink);
 }
 
 .about-me {
@@ -314,12 +316,6 @@ footer .copyright span {
 	/* ---------- project section ---------- */
 	#projects {
 		margin-top: 5rem;
-	}
-
-	.pj-img {
-		width: 20rem;
-		height: 20rem;
-		margin: 0 auto;
 	}
 
 	/* ---------- about section ---------- */

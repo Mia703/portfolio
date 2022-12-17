@@ -1,9 +1,16 @@
 $(document).ready(function () {
 
-	$(".menu-toggle").click(function (e) { 
+	// don't show the navigation
+	$("nav.navigation").hide();
+
+	// open navigation
+	$('.menu-toggle #open').click(function (e) { 
 		e.preventDefault();
-		$(".menu-toggle #close").delay("slow").fadeIn();
-		$(".menu-toggle #open").delay("slow").fadeOut();
+
+		$("nav.navigation").slideDown("slow");
 	});
+
+	// how do I close the navigation?
+	
 	
 });

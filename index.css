@@ -1,0 +1,371 @@
+
+/* =================== imported fonts =================== */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Unica+One&family=Yeseva+One&display=swap');
+
+/* =================== global variables =================== */
+:root {
+	--primary-bg-colour: #FBEDED;
+	--primary-font-colour: #34282C;
+	--primary-accent-pink: #DF7C7D;
+	--primary-accent-light-pink: #E8CBCA;
+	--primary-accent-brown: #584346;
+}
+
+/* =================== reset default styles =================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =================== base page styles =================== */
+body {
+	background-color: var(--primary-bg-colour);
+	color: var(--primary-font-colour);
+}
+
+/* =================== font styles =================== */
+.main-header {
+	font-family: 'Yeseva One', cursive;
+	font-size: 100px;
+	font-weight: normal;
+}
+
+.nav-link {
+	font-family: 'Unica One', cursive;
+	font-size: 90px;
+	font-weight: normal;
+}
+
+.button {
+	font-family: 'Unica One', cursive;
+	font-size: 24px;
+	font-weight: normal;
+	text-transform: uppercase;
+
+	background-color: var(--primary-bg-colour);
+	border: 2px solid var(--primary-font-colour);
+	border-radius: 1000px;
+	padding: .3rem .8rem;
+}
+
+/* for buttons with a tags */
+.button-link {
+	font-family: 'Unica One', cursive;
+	font-size: 24px;
+	font-weight: normal;
+	text-transform: uppercase;
+	color: var(--primary-font-colour);
+	text-decoration: none;
+}
+
+
+h1 {
+	font-family: 'Unica One', cursive;
+	font-size: 48px;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-family: 'Noto Serif', serif;
+	font-size: 32px;
+	font-weight: normal;
+}
+
+h3 {
+	font-family: 'Noto Serif', serif;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+p {
+	font-family: 'Noto Serif', serif;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+/* =================== constants =================== */
+.main-grid {
+	display: grid;
+	padding: 2rem;
+}
+
+/* ---------- navigation ---------- */
+nav.navigation {
+	position: fixed;
+	top: 4rem;
+	right: 1rem;
+	left: 1rem;
+	padding: 1.5rem;
+	background-color: var(--primary-accent-light-pink);
+	border-radius: 20px;
+
+	display: none;
+}
+
+.nav-list {
+	list-style: none;
+}
+
+.nav-item {
+	text-align: right;
+}
+
+.nav-link {
+	text-decoration: none;
+	color: var(--primary-font-colour);
+}
+
+/* ---------- nav header ---------- */
+.nav-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 1rem;
+}
+
+.menu-toggle {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	border-radius: 10000px;
+	width: 3rem;
+	height: 3rem;
+	background-color: var(--primary-bg-colour);
+	border: 2px solid var(--primary-accent-pink);
+}
+
+.menu-toggle img {
+	position: absolute;
+	width: 1.5rem;
+}
+
+.menu-toggle #close {
+	display: none;
+}
+
+
+/* ---------- main section ---------- */
+#main {
+	text-align: center;
+	margin: 5rem 0;
+}
+
+/* ---------- skills section ---------- */
+.skills-container {
+	display: grid;
+}
+
+.skill {
+	background-color: var(--primary-accent-light-pink);
+	border-radius: 20px;
+	padding: 1rem;
+}
+
+.skill *:not(:last-child) {
+	margin-bottom: .8rem;
+}
+
+/* ---------- project section ---------- */
+#projects h1 {
+	margin-bottom: .8rem;
+}
+
+.project-container {
+	display: grid;
+}
+
+.pj-img {
+	width: 30rem;
+	height: 30rem;
+	overflow: hidden;
+	background-color: var(--primary-accent-light-pink);
+	
+	display: flex;
+	justify-content: center;
+}
+
+.pj-text {
+	margin-top: .5rem;
+	padding: 0 .5rem;
+}
+
+.pj-text .top, 
+.pj-text .bottom {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.pj-text .top {
+	border-bottom: 2px solid var(--primary-font-colour);
+	padding-bottom: .5rem;
+}
+
+.pj-text .bottom {
+	padding-top: .5rem;
+}
+
+/* ---------- about section ---------- */
+#about {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 0 5rem;
+}
+
+#about h1 {
+	margin-bottom: 1rem;
+}
+
+#email {
+	display: block;
+	color: var(--primary-font-colour);
+}
+
+.about-me {
+	width: 45ch;
+}
+
+/* ---------- footer ---------- */
+footer .socials {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+footer .socials a {
+	color: var(--primary-font-colour);
+	text-decoration: none;
+}
+
+footer .copyright {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+footer .copyright span {
+	font-size: 12px;
+}
+
+/* scroll up button */
+#up {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+#up span {
+	margin-left: .5rem;
+	font-size: 20px;
+}
+
+/* =================== media queries =================== */
+
+/* =================== MOBILE =================== */
+@media only screen and (max-width: 40em) {
+
+	/* ---------- mobile constants ---------- */
+	.main-grid {
+		grid-template-columns: repeat(4, 1fr);
+		padding: 1rem;
+	}
+
+	.button, .button-link  {
+		font-size: 16px;
+	}
+
+	.nav-header, #main, #skills, #projects, #about, #footer {
+		grid-column: span 4;
+	}
+
+	/* ---------- main section ---------- */
+	#main {
+		margin: 8rem 0;
+	}
+
+	#main h1 {
+		font-size: 40px;
+	}
+
+	/* ---------- skills section ---------- */
+	#skills h1 {
+		margin-bottom: 2rem;
+	}
+
+	.skills-container {
+		grid-template-columns: 1fr;
+	}
+
+	.skill:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+
+	/* ---------- project section ---------- */
+	#projects {
+		margin-top: 5rem;
+	}
+
+	.pj-img {
+		width: 20rem;
+		height: 20rem;
+		margin: 0 auto;
+	}
+
+	/* ---------- about section ---------- */
+	#about {
+		display: inline-block;
+		padding: 0;
+		margin: 5rem 0;
+	}
+
+	#about div:not(:first-child) {
+		margin-top: 3rem;
+	}
+	
+	.about-me {
+		width: 100%;
+	}
+
+	/* ---------- footer section ---------- */
+	footer {
+		display: none;
+	}
+}
+
+/* =================== DESKTOP =================== */
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+	.main-grid {
+		grid-template-columns: repeat(12, 1fr);
+	}
+
+	.nav-header, #main, #skills, #projects, #about, #footer {
+		grid-column: span 12;
+	}
+
+	/* ---------- skills section ---------- */
+	.skills-container {
+		grid-template-columns: repeat(4, 1fr);
+		gap: 10px;
+	}
+
+	/* ---------- project section ---------- */
+	.project-container {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 10px;
+	}
+
+	.project {
+		grid-column: span 1;
+	}
+}

@@ -4,20 +4,16 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+
+	<title>Amya N Moore</title>
+
+	<link rel="stylesheet" href="index.css">
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
 	
-	<title>Amya N. Moore</title>
-
-	<!-- faicon -->
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	
-	<!-- css -->
-	<link rel="stylesheet" href="./styles/index.css">
-
-	<!-- google icons -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
-
 	<!-- jquery -->
-		<!-- jQuery CDNs -->
 	<!-- import jquery -->
 	<script src="https://code.jquery.com/jquery-3.6.1.js" 
 	integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
@@ -26,266 +22,191 @@
 	<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js" 
 	integrity="sha256-6XMVI0zB8cRzfZjqKcD01PBsAy3FlDASrlC8SxCpInY=" crossorigin="anonymous"></script>
 
-	<!-- chart js -->
-	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-
 </head>
 <body>
 
+	<!-- navigation overlay -->
+	<nav class="navigation">
+		<ul class="nav-list">
+			<li class="nav-item">
+				<a href="#" class="nav-link">Home</a>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-link">Skills</a>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-link">Projects</a>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-link">About</a>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-link">Contacts</a>
+			</li>
+		</ul>
+	</nav>
+	
+	
 	<div class="main-grid">
 		
-		<div class="navigation-header mobile">
+		<!-- navigation header -->
+		<div class="nav-header">
 			<div class="logo-container">
-				<h1>
-					<a href="index.html">ANM</a>
-				</h1>
+				<h3>Amya N. Moore</h3>
+				<p>Web Designer & Developer</p>
 			</div>
+		
+			<button class="menu-toggle">
+				<img id="open" src="./assets/icon-menu.svg" alt="">
+				<img id="close" src="./assets/icon-menu-close.svg" alt="">
+			</button>
 
-			<div class="toggle-container open">
-				<button class="menu-toggle open">
-					<img src="./assets/icon-menu.svg" alt="open button">
-				</button>
-			</div>
 		</div>
 
-		<section id="overlay"></section>
+		<section id="main">
+			<h1 class="main-header">
+				Amya N. Moore, <br>
+				Web Designer & Developer
+			</h1>
+		</section>
 
-		<nav class="navigation" id="mobile">
-			<div class="toggle-container close">
-				<button class="menu-toggle close">
-					<img src="./assets/icon-menu-close.svg" alt="close button">
-				</button>
-			</div>
+		<section id="skills">
+			<h1>Skills</h1>
 
-			<ul class="nav-list mobile">
-				<li class="nav-item">
-					<a href="index.html" class="nav-link">Home</a>
-				</li>
-				<li class="nav-item">
-					<a href="#skills-ct" class="nav-link">Skills</a>
-				</li>
-				<li class="nav-item">
-					<a href="#projects-ct" class="nav-link">Projects</a>
-				</li>
-				<li class="nav-item">
-					<a href="#about-ct" class="nav-link">About Me</a>
-				</li>
-			</ul>
-		</nav>
+			<div class="skills-container">
+				<div class="skill">
+					<h2>Figma</h2>
+					<p>
+						My software of choice for changing my schetch into a working prototype.
+					</p>
+					<div class="hastag">
+						<button class="button">Web Design</button>
+					</div>
+				</div>
 
-		<nav class="navigation" id="desktop">
-			<div class="logo-container">
-				<h1>
-					<a href="index.html">ANM</a>
-				</h1>
-			</div>
+				<div class="skill">
+					<h2>HTML</h2>
+					<p>
+						The basis for all websites.
+					</p>
+					<div class="hastag">
+						<button class="button">Web Development</button>
+					</div>
+				</div>
 
-			<ul class="nav-list">
-				<li class="nav-item">
-					<a href="index.html" class="nav-link">Home</a>
-				</li>
-				<li class="nav-item">
-					<a href="#" class="nav-link">Skills</a>
-				</li>
-				<li class="nav-item">
-					<a href="#projects-cont" class="nav-link">Projects</a>
-				</li>
-				<li class="nav-item">
-					<a href="#" class="nav-link">About</a>
-				</li>
-			</ul>
+				<div class="skill">
+					<h2>CSS</h2>
+					<p>
+						
+					</p>
+					<div class="hastag">
+						<button class="button">Web Development</button>
+					</div>
+				</div>
 
-			<div class="socials-container">
-				<!-- insert socials icon: linkedIn?, github? -->
+				<div class="skill">
+					<h2>jQery</h2>
+					<p>
 
-				<button>Let's Connect</button>
-			</div>
-		</nav>
-		
-		<section class="header-container">
-			<h3>
-				Hello, my name is Amya Moore and I am a 
-				<br>
-				<span class="emp">web designer & developer</span>
-				<br>
-				from Balitmore, Maryland.
-			</h3>
-			<p>Welcome to my portfolio.</p>
-
-			<div class="header-btns-container">
-				<button>
-					<a href="#skills-ct">My Skills</a>
-				</button>
-				<button>
-					<a href="#projects-ct">My Projects</a>
-				</button>
+					</p>
+					<div class="hastag">
+						<button class="button">Web Development</button>
+					</div>
+				</div>
 			</div>
 		</section>
 
-		<section class="skills-container" id="skills-ct">
-			<h2 class="emp">Skills</h2>
+		<section id="projects">
+			<h1>Projects ( <span id="pj-total">X</span> )</h1>
 
-			<div class="my-skills" id="mobile">
+			<div class="project-container">
 
-				<div class="skill">
-					<p>HTML</p>
-					<div class="bar outer">
-						<div class="bar inner" id="html">90%</div>
-					</div>
-				</div>
-
-				<div class="skill">
-					<p>CSS</p>
-					<div class="bar outer">
-						<div class="bar inner" id="css">70%</div>
-					</div>
-				</div>
-
-				<div class="skill">
-					<p>JS & jQuery</p>
-					<div class="bar outer">
-						<div class="bar inner" id="jq">40%</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="my-skills" id="desktop">
-
-			</div>
-		</section>
-
-		<section class="project-container" id="projects-ct">
-			<h2 class="emp">Projects</h2>
-
-			<!-- a project news homepage -->
-			<div class="project">
-				<div class="project-img-container">
-					<a href="https://mia703.github.io/FrontEnd-Mentor--News-Homepage/" class="project-link desktop" target="_blank">
+				<div class="project">
+					<div class="pj-img">
 						<img src="./assets/project images/NewsHomepage.png" alt="">
-					</a>
-				</div>
+					</div>
 
-				<div class="project-description-container">
-					<h3>News Homepage Challenge</h3>
-					<p>HTML/CSS/jQuery</p>
-					<div class="github-container">
-						<a href="https://mia703.github.io/FrontEnd-Mentor--News-Homepage/" class="project-link mobile" target="_blank">
-							View Project
-							<span class="material-symbols-outlined arrow">north_east</span>
-						</a>
+					<div class="pj-text">
+						<div class="top">
+							<h3>Project Title</h3>
+							<p>HTML/CSS</p>
+						</div>
+						<div class="bottom">
+							<button class="button">
+								<a href="" class="button-link">View Project</a>
+							</button>
 
-						<a href="https://github.com/Mia703/FrontEnd-Mentor--News-Homepage" class="git-link" target="_blank">
-							View on GitHub
-							<span class="material-symbols-outlined arrow">north_east</span>
-						</a>
+							<button class="button">
+								<a href="" class="button-link">GitHub</a>
+							</button>
+						</div>
 					</div>
 				</div>
+			
 			</div>
 
-			<!-- a project testimonal grid-->
-			<div class="project">
-				<div class="project-img-container">
-					<a href="https://mia703.github.io/FrontEnd-Mentor----Testimonials-Grid/" class="project-link desktop" target="_blank">
-						<img src="./assets/project images/TestimonialsGrid.png" alt="">
-					</a>
-				</div>
-
-				<div class="project-description-container">
-					<h3>Testimonials Grid Challenge</h3>
-					<p>HTML/CSS</p>
-					<div class="github-container">
-						<a href="https://mia703.github.io/FrontEnd-Mentor----Testimonials-Grid/" class="project-link mobile" target="_blank">
-							View Project
-							<span class="material-symbols-outlined arrow">north_east</span>
-						</a>
-
-						<a href="https://github.com/Mia703/FrontEnd-Mentor----Testimonials-Grid" class="git-link" target="_blank">
-							View on GitHub
-							<span class="material-symbols-outlined arrow">north_east</span>
-						</a>
-					</div>
-				</div>
-			</div>
-
-			<!-- a project Space Tourism-->
-			<div class="project">
-				<div class="project-img-container">
-					<a href="https://mia703.github.io/FrontEndMentor---Space-Tourism-Website/" class="project-link desktop" target="_blank">
-						<img src="./assets/project images/SpaceTourism.png" alt="">
-					</a>
-				</div>
-
-				<div class="project-description-container">
-					<h3>Multi-Page Space Tourism Site</h3>
-					<p>HTML/CSS</p>
-					<div class="github-container">
-						<a href="https://mia703.github.io/FrontEndMentor---Space-Tourism-Website/" class="project-link mobile" target="_blank">
-							View Project
-							<span class="material-symbols-outlined arrow">north_east</span>
-						</a>
-
-						<a href="https://github.com/Mia703/FrontEndMentor---Space-Tourism-Website" class="git-link" target="_blank">
-							View on GitHub
-							<span class="material-symbols-outlined arrow">north_east</span>
-						</a>
-					</div>
-				</div>
-			</div>
-
-			<!-- a project Easy Bank-->
-			<div class="project">
-				<div class="project-img-container">
-					<a href="https://mia703.github.io/FrontEndMentor--EasyBank-Landing/" class="project-link desktop" target="_blank">
-						<img src="./assets/project images/EasyBank.png" alt="">
-					</a>
-				</div>
-
-				<div class="project-description-container">
-					<h3>Easy Bank Landing Page</h3>
-					<p>HTML/CSS</p>
-
-					<div class="github-container">
-						<a href="https://mia703.github.io/FrontEndMentor--EasyBank-Landing/" class="project-link mobile" target="_blank">
-							View Project
-							<span class="material-symbols-outlined arrow">north_east</span>
-						</a>
-
-						<a href="https://github.com/Mia703/FrontEndMentor--Re-EasyBank" class="git-link" target="_blank">
-							View on GitHub
-							<span class="material-symbols-outlined arrow">north_east</span>
-						</a>
-					</div>
-				</div>
-			</div>
 		</section>
 
-		<section class="about-container" id="about-ct">
+		<section id="about">
+			<div class="contact">
+				<h1>Contact Me:</h1>
+				<a id="email" href="mailto:amya.nicole.moore@gmail.com">
+					<h2>amya.nicole.moore <br>
+						@gmail.com</h2>
+				</a>
+			</div>
 
-			<div class="abt-me-container">
-				<h2 class="emp">About Me</h2>
-				<p>
-					Lorem, ipsum dolor sit amet consectetur 
-					adipisicing elit. Saepe aliquid commodi ea 
-					beatae sed suscipit quos magni facere quidem, 
-					rem culpa illo debitis voluptatem consectetur 
-					fugit iste eum neque voluptas.
+			<div class="about-me">
+				<h1>About Me:</h1>
+				<p>I'm Amya N. Moore, and I Lorem, 
+					ipsum dolor sit amet consectetur adipisicing elit. 
+					Iure suscipit, debitis facere tempora incidunt nam quasi 
+					consequuntur rem, tempore, quibusdam nulla mollitia quas 
+					laborum maiores corrupti harum modi est repellat.
 				</p>
-				<div class="socials">
-					<button>social</button>
-					<button>social</button>
-					<button>social</button>
-				</div>
 			</div>
 		</section>
-
 
 		<footer id="footer">
-			<div class="copy-right-container">
+			<div class="socials">
+				<h3>
+					<a href="">LinkedIn</a>
+				</h3>
+
+				<h3>
+					<a href="">GitHub</a>
+				</h3>
+
+				<h3>
+					<a href="">Resume</a>
+				</h3>
+			</div>
+
+			<hr id="hr-line">
+
+			<div class="copyright">
+				<p>
+					<span>
+						Designed by &
+						Developed by:
+					</span>
+					<br>
+					Amya Moore
+				</p>
+
+				<p>
+					© 2022 - All Rights Reserved
+				</p>
+
+				<button id="up" class="button">
+					scroll to Top
+					<span class="material-symbols-outlined">arrow_upward</span>
+				</button>
 			</div>
 		</footer>
 
-
 	</div>
-	<script src="./actions/index.js"></script>
+
+	<script src="index.js"></script>
 </body>
 </html>

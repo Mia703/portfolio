@@ -104,6 +104,8 @@ nav.navigation {
 	z-index: 2;
 	padding: 0.5rem;
 	background-color: rgba(88, 67, 70, 95%);
+
+	display: none;
 }
 
 .nav-list {
@@ -128,6 +130,12 @@ nav.navigation {
 	align-items: center;
 
 	padding: 1rem;
+}
+
+.nav-header p {
+	color: var(--primary-accent-pink);
+	text-transform: uppercase;
+	font-size: 14px;
 }
 
 .menu-toggle {
@@ -173,10 +181,20 @@ nav.navigation {
 	background-color: var(--primary-accent-light-pink);
 	border-radius: 20px;
 	padding: 1rem;
+
+	display: grid;
+	grid-template-rows: max-content;
 }
 
 .skill *:not(:last-child) {
 	margin-bottom: .8rem;
+}
+
+.hastag {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-end;
 }
 
 /* ---------- project section ---------- */
@@ -186,6 +204,7 @@ nav.navigation {
 
 .project-container {
 	display: grid;
+	gap: 3rem;
 }
 
 .pj-img img {
@@ -193,11 +212,19 @@ nav.navigation {
 }
 
 .pj-text {
-	margin-top: .5rem;
+	margin-top: 1rem;
 	padding: 0 .5rem;
 }
 
-.pj-text .top, 
+.pj-text .top {
+	border-bottom: 2px solid var(--primary-font-colour);
+	padding-bottom: .5rem;
+}
+
+.pj-text .top p {
+	font-size: 14px;
+}
+
 .pj-text .bottom {
 	display: flex;
 	flex-direction: row;
@@ -205,10 +232,6 @@ nav.navigation {
 	align-items: center;
 }
 
-.pj-text .top {
-	border-bottom: 2px solid var(--primary-font-colour);
-	padding-bottom: .5rem;
-}
 
 .pj-text .bottom {
 	padding-top: .5rem;
@@ -285,6 +308,9 @@ footer .copyright span {
 
 	.button, .button-link  {
 		font-size: 16px;
+		background-color: var(--primary-accent-pink);
+		color: white;
+		border-color: var(--primary-accent-pink);
 	}
 
 	.nav-header, #main, #skills, #projects, #about, #footer {

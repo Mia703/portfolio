@@ -12,5 +12,9 @@ $(document).ready(function () {
 
 	// how do I close the navigation?
 	
+
+	// count number of projects
+	var total_projects = $(".project").length;
+	$("#pj-total").html(total_projects);
 	
 });

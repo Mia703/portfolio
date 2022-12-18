@@ -43,7 +43,7 @@ body {
 
 .button {
 	font-family: 'Unica One', cursive;
-	font-size: 24px;
+	font-size: 16px;
 	font-weight: normal;
 	text-transform: uppercase;
 
@@ -57,7 +57,7 @@ body {
 /* for buttons with <a> tags */
 .button-link {
 	font-family: 'Unica One', cursive;
-	font-size: 24px;
+	font-size: 16px;
 	font-weight: normal;
 	text-transform: uppercase;
 	color: whitesmoke;
@@ -175,7 +175,7 @@ nav.navigation {
 /* ---------- skills section ---------- */
 .skills-container {
 	display: grid;
-	gap: 10px;
+	gap: 2rem;
 }
 
 .skill {
@@ -183,23 +183,23 @@ nav.navigation {
 	border-radius: 20px;
 	padding: 1rem;
 
-	min-width: 11rem;
+	/* the smallest it can get */
+	min-width: 15rem;
 
-	max-width: 12rem;
-	max-height: 12rem;
+	/* the largest it can get */
+    max-width: 20rem;
+    min-height: 10rem;
 
+	margin: 0 auto;
+	
 	display: grid;
 	grid-template-rows: max-content;
-}
-
-.skill *:not(:last-child) {
-	margin-bottom: .8rem;
 }
 
 .hastag {
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-start;
+	justify-content: flex-end;
 	align-items: flex-end;
 }
 
@@ -245,10 +245,9 @@ nav.navigation {
 
 /* ---------- about section ---------- */
 #about {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	padding: 0 5rem;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1.5rem;
 }
 
 #about h1 {
@@ -273,8 +272,23 @@ footer .socials {
 }
 
 footer .socials a {
-	color: var(--primary-font-colour);
+	color: var(--primary-accent-pink);
 	text-decoration: none;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+footer .socials span {
+	font-size: 20px;
+	margin-left: .2rem;
+}
+
+#hr-line {
+	margin: .5rem 0;
+	border: 1px solid var(--primary-accent-light-pink);
 }
 
 footer .copyright {
@@ -284,21 +298,25 @@ footer .copyright {
 	align-items: flex-start;
 }
 
-footer .copyright span {
-	font-size: 12px;
+footer .copyright * {
+	font-size: 14px;
+}
+
+footer .copyright p {
+	color: var(--primary-accent-light-pink);
 }
 
 /* scroll up button */
-#up {
+footer .button-link {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 }
 
-#up span {
+footer .button-link span {
 	margin-left: .5rem;
-	font-size: 20px;
+	font-size: 16px;
 }
 
 /* =================== media queries =================== */
@@ -310,10 +328,6 @@ footer .copyright span {
 	.main-grid {
 		grid-template-columns: repeat(4, 1fr);
 		padding: 1rem;
-	}
-
-	.button, .button-link  {
-		font-size: 16px;
 	}
 
 	.nav-header, #main, #skills, #projects, #about, #footer {
@@ -340,18 +354,7 @@ footer .copyright span {
 	}
 
 	.skill {
-		max-width: 100%;
-	}
-
-	.skill:not(:last-child) {
-		margin-bottom: 2rem;
-	}
-
-	.hastag {
-		display: flex;
-		flex-direction: row;
-		justify-content: flex-end;
-		align-items: flex-end;
+		min-width: 100%;
 	}
 
 	/* ---------- project section ---------- */
@@ -362,7 +365,6 @@ footer .copyright span {
 	/* ---------- about section ---------- */
 	#about {
 		display: inline-block;
-		padding: 0;
 		margin: 5rem 0;
 	}
 
@@ -387,7 +389,11 @@ footer .copyright span {
 	/* ---------- tablet constants ---------- */
 	.main-grid {
 		grid-template-columns: repeat(6, 1fr);
-		padding: 1rem;
+		padding: 1.5rem;
+	}
+
+	.button-link:hover, .menu-toggle.open:hover {
+		cursor: pointer;
 	}
 
 	.nav-header, #main, #skills, #projects, #about, #footer {
@@ -402,6 +408,37 @@ footer .copyright span {
 	#main h1 {
 		font-size: 5em;
 	}
+
+	/* ---------- skills section ---------- */
+	#skills h1 {
+		margin-bottom: 2rem;
+	}
+
+	/* skills container grid */
+	.skills-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.skill {
+		min-width: 80%;
+	}
+
+	/* ---------- project section ---------- */
+	#projects {
+		margin-top: 5rem;
+	}
+
+	/* ---------- about section ---------- */
+	#about {
+		margin-top: 5rem;
+	}
+
+	/* ---------- footer section ---------- */
+	footer#footer {
+		margin-top: 5rem;
+	}
+
+
 }
 
 /* =================== DESKTOP =================== */

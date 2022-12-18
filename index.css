@@ -47,8 +47,9 @@ body {
 	font-weight: normal;
 	text-transform: uppercase;
 
-	background-color: var(--primary-bg-colour);
-	border: 2px solid var(--primary-font-colour);
+	background-color: var(--primary-accent-pink);
+	border: 2px solid var(--primary-accent-pink);
+	color: whitesmoke;
 	border-radius: 1000px;
 	padding: .3rem .8rem;
 }
@@ -59,7 +60,7 @@ body {
 	font-size: 24px;
 	font-weight: normal;
 	text-transform: uppercase;
-	color: var(--primary-font-colour);
+	color: whitesmoke;
 	text-decoration: none;
 }
 
@@ -128,7 +129,6 @@ nav.navigation {
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-
 	padding: 1rem;
 }
 
@@ -175,12 +175,18 @@ nav.navigation {
 /* ---------- skills section ---------- */
 .skills-container {
 	display: grid;
+	gap: 10px;
 }
 
 .skill {
 	background-color: var(--primary-accent-light-pink);
 	border-radius: 20px;
 	padding: 1rem;
+
+	min-width: 11rem;
+
+	max-width: 12rem;
+	max-height: 12rem;
 
 	display: grid;
 	grid-template-rows: max-content;
@@ -217,7 +223,7 @@ nav.navigation {
 }
 
 .pj-text .top {
-	border-bottom: 2px solid var(--primary-font-colour);
+	border-bottom: 2px solid var(--primary-accent-light-pink);
 	padding-bottom: .5rem;
 }
 
@@ -308,9 +314,6 @@ footer .copyright span {
 
 	.button, .button-link  {
 		font-size: 16px;
-		background-color: var(--primary-accent-pink);
-		color: white;
-		border-color: var(--primary-accent-pink);
 	}
 
 	.nav-header, #main, #skills, #projects, #about, #footer {
@@ -319,11 +322,11 @@ footer .copyright span {
 
 	/* ---------- main section ---------- */
 	#main {
-		margin: 8rem 0;
+		margin: 10rem 0;
 	}
 
 	#main h1 {
-		font-size: 40px;
+		font-size: 2.5em;
 	}
 
 	/* ---------- skills section ---------- */
@@ -331,12 +334,24 @@ footer .copyright span {
 		margin-bottom: 2rem;
 	}
 
+	/* skills container grid */
 	.skills-container {
 		grid-template-columns: 1fr;
 	}
 
+	.skill {
+		max-width: 100%;
+	}
+
 	.skill:not(:last-child) {
 		margin-bottom: 2rem;
+	}
+
+	.hastag {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: flex-end;
 	}
 
 	/* ---------- project section ---------- */
@@ -362,6 +377,30 @@ footer .copyright span {
 	/* ---------- footer section ---------- */
 	footer {
 		display: none;
+	}
+}
+
+
+/* =================== TABLET =================== */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+
+	/* ---------- tablet constants ---------- */
+	.main-grid {
+		grid-template-columns: repeat(6, 1fr);
+		padding: 1rem;
+	}
+
+	.nav-header, #main, #skills, #projects, #about, #footer {
+		grid-column: span 6;
+	}
+
+	/* ---------- main section ---------- */
+	#main {
+		margin: 18rem 0;
+	}
+
+	#main h1 {
+		font-size: 5em;
 	}
 }
 

@@ -104,13 +104,18 @@ nav.navigation {
 
 	z-index: 2;
 	padding: 0.5rem;
-	background-color: rgba(88, 67, 70, 95%);
-
-	display: none;
+	background-color: var(--primary-accent-brown);
+	
+	/* display: none; */
 }
 
 .nav-list {
 	list-style: none;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
 }
 
 .nav-item {
@@ -138,32 +143,78 @@ nav.navigation {
 	font-size: 14px;
 }
 
-.menu-toggle {
+/* ---------- menu toggles ---------- */
+/* open toggle */
+.menu-toggle.open {
+	width: 3rem;
+	height: 3rem;
+	padding: .5rem;
+	background-color: var(--primary-bg-colour);
+	border: none;
+
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
 
-.menu-toggle.open {
-	padding: 1rem;
-	background-color: var(--primary-bg-colour);
-	border: none;
+/* the lines for opening the menu */
+.menu-toggle.open::before {
+	content: '';
+	position: relative;
+	width: 28px;
+	height: 2px;
+	background: var(--primary-font-colour);
+	transform: translateY(-5px);
+	transition: .2s;
+}
+
+.menu-toggle.open::after {
+	content: '';
+	position: absolute;
+	width: 28px;
+	height: 2px;
+	background: var(--primary-font-colour);
+	transform: translateY(5);
+	transition: .2s;
+}
+
+/* close toggle */
+.exit-container {
+	display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .menu-toggle.close {
-	padding: 1rem;
-	background: none;
+	width: 90px;
+	height: 90px;
+	padding: .5rem;
+	background-color: var(--primary-accent-brown);
+	
 	border: none;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.menu-toggle.open img {
+.menu-toggle.close::before {
+	content: '';
+	position: relative;
+	width: 61px;
+	height: 4px;
+	background-color: whitesmoke;
+	transform: rotate(45deg);
+}
+
+.menu-toggle.close::after {
+	content: '';
 	position: absolute;
-	width: 1.5rem;
-}
-
-.menu-toggle.close img {
-	/* TODO: find svg of open and close btns, can't change color of img */
+	width: 61px;
+	height: 4px;
+	background-color: whitesmoke;
+	transform: rotate(-45deg);
 }
 
 /* ---------- main section ---------- */
@@ -398,6 +449,10 @@ footer .button-link span {
 
 	.nav-header, #main, #skills, #projects, #about, #footer {
 		grid-column: span 6;
+	}
+
+	.menu-toggle.close:hover, .menu-toggle.open:hover {
+		cursor: pointer;
 	}
 
 	/* ---------- main section ---------- */

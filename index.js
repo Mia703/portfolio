@@ -1,20 +1,15 @@
 $(document).ready(function () {
+	const nav = $("nav.navigation");
+	const open = $(".menu-toggle.open");
+	const close = $(".menu-toggle.close");
 
-	// don't show the navigation
-	$("nav.navigation").hide();
-
-	// open navigation
-	$('.menu-toggle #open').click(function (e) { 
+	$(open).click(function (e) { 
 		e.preventDefault();
-
-		$("nav.navigation").slideDown("slow");
+		$(nav).slideDown("slow");
 	});
 
-	// how do I close the navigation?
-	
-
-	// count number of projects
-	var total_projects = $(".project").length;
-	$("#pj-total").html(total_projects);
-	
+	$(close).click(function (e) { 
+		e.preventDefault();
+		$(nav).slideUp("slow");
+	});
 });

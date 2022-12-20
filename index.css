@@ -31,7 +31,7 @@ body {
 /* =================== font styles =================== */
 .main-header {
 	font-family: 'Yeseva One', cursive;
-	font-size: 100px;
+	font-size: 5em;
 	font-weight: normal;
 }
 
@@ -52,6 +52,7 @@ body {
 	color: whitesmoke;
 	border-radius: 1000px;
 	padding: .3rem .8rem;
+	transition: all ease-in-out .2s;
 }
 
 /* for buttons with <a> tags */
@@ -106,7 +107,7 @@ nav.navigation {
 	padding: 0.5rem;
 	background-color: var(--primary-accent-brown);
 	
-	/* display: none; */
+	display: none;
 }
 
 .nav-list {
@@ -220,10 +221,14 @@ nav.navigation {
 /* ---------- main section ---------- */
 #main {
 	text-align: center;
-	margin: 5rem 0;
+	margin: 10.5rem 0;
 }
 
 /* ---------- skills section ---------- */
+#skills h1 {
+	margin-bottom: 2rem;
+}
+
 .skills-container {
 	display: grid;
 	gap: 2rem;
@@ -255,8 +260,12 @@ nav.navigation {
 }
 
 /* ---------- project section ---------- */
+#projects {
+	margin-top: 5rem;
+}
+
 #projects h1 {
-	margin-bottom: .8rem;
+	margin-bottom: 2rem;
 }
 
 .project-container {
@@ -299,6 +308,7 @@ nav.navigation {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 1.5rem;
+	margin: 5rem 0;
 }
 
 #about h1 {
@@ -312,6 +322,10 @@ nav.navigation {
 
 .about-me {
 	width: 45ch;
+}
+
+.about-me a {
+	color: var(--primary-accent-pink);
 }
 
 /* ---------- footer ---------- */
@@ -395,10 +409,6 @@ footer .button-link span {
 	}
 
 	/* ---------- skills section ---------- */
-	#skills h1 {
-		margin-bottom: 2rem;
-	}
-
 	/* skills container grid */
 	.skills-container {
 		grid-template-columns: 1fr;
@@ -408,15 +418,9 @@ footer .button-link span {
 		min-width: 100%;
 	}
 
-	/* ---------- project section ---------- */
-	#projects {
-		margin-top: 5rem;
-	}
-
 	/* ---------- about section ---------- */
 	#about {
 		display: inline-block;
-		margin: 5rem 0;
 	}
 
 	#about div:not(:first-child) {
@@ -443,7 +447,7 @@ footer .button-link span {
 		padding: 1.5rem;
 	}
 
-	.button-link:hover, .menu-toggle.open:hover {
+	.project-container .button:hover, .menu-toggle.open:hover {
 		cursor: pointer;
 	}
 
@@ -465,10 +469,6 @@ footer .button-link span {
 	}
 
 	/* ---------- skills section ---------- */
-	#skills h1 {
-		margin-bottom: 2rem;
-	}
-
 	/* skills container grid */
 	.skills-container {
 		grid-template-columns: repeat(2, 1fr);
@@ -478,21 +478,10 @@ footer .button-link span {
 		min-width: 80%;
 	}
 
-	/* ---------- project section ---------- */
-	#projects {
-		margin-top: 5rem;
-	}
-
-	/* ---------- about section ---------- */
-	#about {
-		margin-top: 5rem;
-	}
-
 	/* ---------- footer section ---------- */
 	footer#footer {
 		margin-top: 5rem;
 	}
-
 
 }
 
@@ -500,25 +489,63 @@ footer .button-link span {
 @media only screen and (min-width: 64.063em) and (max-width: 90em) {
 	.main-grid {
 		grid-template-columns: repeat(12, 1fr);
+		padding: 1rem;
 	}
 
 	.nav-header, #main, #skills, #projects, #about, #footer {
 		grid-column: span 12;
 	}
 
+	/* ---------- hover events ---------- */
+	.exit-container button:hover, 
+	.menu-toggle.open:hover,
+	.project-container .button:hover,
+	footer a, footer .button {
+		cursor: pointer;
+	}
+
+	.nav-link:hover {
+		color: var(--primary-accent-pink);
+		transition: all ease-in-out 0.2s;
+	}
+
+	.socials a:hover {
+		color: var(--primary-accent-brown);
+		transition: all ease-in-out 0.2s;
+	}
+	/* ---------- main section ---------- */
+	
 	/* ---------- skills section ---------- */
 	.skills-container {
 		grid-template-columns: repeat(4, 1fr);
-		gap: 10px;
 	}
 
 	/* ---------- project section ---------- */
 	.project-container {
-		grid-template-columns: repeat(3, 1fr);
-		gap: 10px;
+		grid-template-columns: repeat(2, 1fr);
 	}
 
 	.project {
 		grid-column: span 1;
+	}
+
+	/* ---------- about section ---------- */
+	#about .contact, 
+	#about .about-me {
+		margin: 0 auto;
+	}
+
+	.about-me {
+		width: 70ch;
+	}
+
+	/* ---------- footer section ---------- */
+	.socials {
+		padding: 0 2rem;
+	}
+
+	.copyright {
+		padding: 0 2rem;
+		margin-top: 1rem;
 	}
 }

@@ -506,12 +506,25 @@ footer .button-link span {
 
 	.nav-link:hover {
 		color: var(--primary-accent-pink);
-		transition: all ease-in-out 0.2s;
+		transition: all .2s ease-in-out;
 	}
 
 	.socials a:hover {
 		color: var(--primary-accent-brown);
-		transition: all ease-in-out 0.2s;
+		transition: all .2s ease-in-out;
+	}
+
+	.pj-img {
+		overflow: hidden;
+	}
+
+	.pj-img img {
+		transition: all 0.5s ease-in-out;
+	}
+
+	.pj-img img:hover {
+		transform: scale(1.05);
+		transition: all 0.5s ease-in-out;
 	}
 	/* ---------- main section ---------- */
 	

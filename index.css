@@ -96,6 +96,31 @@ p {
 	padding: 2rem;
 }
 
+/* ---------- scroll button ---------- */
+.mobile.top {
+	position: fixed;
+	bottom: 1.5rem;
+	right: 1.5rem;
+
+	background-color: var(--primary-accent-brown);
+	width: 4rem;
+	height: 4rem;
+	border-radius: 100%;
+	box-shadow: 2px 2px 5px rgba(88, 67, 70, 45%);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.mobile.top:hover {
+	cursor: pointer;
+}
+
+.mobile.top span {
+	font-size: 2rem;
+}
+
 /* ---------- navigation ---------- */
 nav.navigation {
 	position: fixed;
@@ -437,7 +462,6 @@ footer .button-link span {
 	}
 }
 
-
 /* =================== TABLET =================== */
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
 
@@ -457,6 +481,10 @@ footer .button-link span {
 
 	.menu-toggle.close:hover, .menu-toggle.open:hover {
 		cursor: pointer;
+	}
+
+	.mobile.top {
+		display: none;
 	}
 
 	/* ---------- main section ---------- */
@@ -494,6 +522,10 @@ footer .button-link span {
 
 	.nav-header, #main, #skills, #projects, #about, #footer {
 		grid-column: span 12;
+	}
+
+	.mobile.top {
+		display: none;
 	}
 
 	/* ---------- hover events ---------- */

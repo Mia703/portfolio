@@ -9,6 +9,9 @@
 	--primary-accent-pink: #DF7C7D;
 	--primary-accent-light-pink: #E8CBCA;
 	--primary-accent-brown: #584346;
+	--primary-accent-white: #F5F5F5;
+
+	--std-transition: all 0.2s ease-in-out;
 }
 
 /* =================== reset default styles =================== */
@@ -31,7 +34,7 @@ body {
 /* =================== font styles =================== */
 .main-header {
 	font-family: 'Yeseva One', cursive;
-	font-size: 5em;
+	font-size: 7em;
 	font-weight: normal;
 }
 
@@ -48,11 +51,16 @@ body {
 	text-transform: uppercase;
 
 	background-color: var(--primary-accent-pink);
-	border: 2px solid var(--primary-accent-pink);
-	color: whitesmoke;
+	border: 2px solid var(--primary-accent-brown);
+	color: var(--primary-accent-white);
 	border-radius: 1000px;
 	padding: .3rem .8rem;
-	transition: all ease-in-out .2s;
+	transition: var(--std-transition);
+}
+
+.button:hover {
+	box-shadow: -3px 3px var(--primary-accent-brown);
+	transition: var(--std-transition);
 }
 
 /* for buttons with <a> tags */
@@ -61,7 +69,7 @@ body {
 	font-size: 16px;
 	font-weight: normal;
 	text-transform: uppercase;
-	color: whitesmoke;
+	color: var(--primary-accent-white);
 	text-decoration: none;
 }
 
@@ -189,7 +197,7 @@ nav.navigation {
 	position: relative;
 	width: 28px;
 	height: 2px;
-	background: var(--primary-font-colour);
+	background: var(--primary-accent-pink);
 	transform: translateY(-5px);
 	transition: .2s;
 }
@@ -199,7 +207,7 @@ nav.navigation {
 	position: absolute;
 	width: 28px;
 	height: 2px;
-	background: var(--primary-font-colour);
+	background: var(--primary-accent-pink);
 	transform: translateY(5);
 	transition: .2s;
 }
@@ -230,7 +238,7 @@ nav.navigation {
 	position: relative;
 	width: 61px;
 	height: 4px;
-	background-color: whitesmoke;
+	background-color: var(--primary-accent-white);
 	transform: rotate(45deg);
 }
 
@@ -239,14 +247,14 @@ nav.navigation {
 	position: absolute;
 	width: 61px;
 	height: 4px;
-	background-color: whitesmoke;
+	background-color: var(--primary-accent-white);
 	transform: rotate(-45deg);
 }
 
 /* ---------- main section ---------- */
 #main {
 	text-align: center;
-	margin: 10.5rem 0;
+	margin: 6rem 0;
 }
 
 /* ---------- skills section ---------- */
@@ -261,6 +269,8 @@ nav.navigation {
 
 .skill {
 	background-color: var(--primary-accent-light-pink);
+	border: 2px solid var(--primary-accent-brown);
+	box-shadow: 0px 4px var(--primary-accent-brown);
 	border-radius: 20px;
 	padding: 1rem;
 
@@ -275,6 +285,7 @@ nav.navigation {
 	
 	display: grid;
 	grid-template-rows: max-content;
+	transition: var(--std-transition);
 }
 
 .hastag {
@@ -298,17 +309,30 @@ nav.navigation {
 	gap: 3rem;
 }
 
+/* all projects */
+.project {
+	border-radius: 20px;
+	border: 2px solid var(--primary-accent-brown);
+	overflow: hidden;
+	box-shadow: 0px 4px var(--primary-accent-brown);
+	background-color: var(--primary-accent-light-pink);
+}
+
+/* project image */
 .pj-img img {
 	width: 100%;
+	border-bottom: 2px solid var(--primary-accent-brown);
+	transition: all 0.5s ease-in-out;
 }
 
+/* project text container */
 .pj-text {
 	margin-top: 1rem;
-	padding: 0 .5rem;
+	padding: 1rem;
 }
 
+/* project header text */
 .pj-text .top {
-	border-bottom: 2px solid var(--primary-accent-light-pink);
 	padding-bottom: .5rem;
 }
 
@@ -316,13 +340,13 @@ nav.navigation {
 	font-size: 14px;
 }
 
+/* project buttons */
 .pj-text .bottom {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
 }
-
 
 .pj-text .bottom {
 	padding-top: .5rem;
@@ -331,7 +355,6 @@ nav.navigation {
 /* ---------- about section ---------- */
 #about {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
 	gap: 1.5rem;
 	margin: 5rem 0;
 }
@@ -345,15 +368,29 @@ nav.navigation {
 	color: var(--primary-accent-pink);
 }
 
-.about-me {
-	width: 45ch;
+.contact, .about-me {
+	border: 2px solid var(--primary-accent-brown);
+	padding: 1.5rem;
+	border-radius: 20px;
+	box-shadow: 0px 4px var(--primary-accent-brown);
+	background-color: var(--primary-accent-white);
+	transition: var(--std-transition);
+	background-color: var(--primary-accent-white);
 }
 
 .about-me a {
 	color: var(--primary-accent-pink);
 }
 
+.subtext {
+	font-size: 14px;
+}
+
 /* ---------- footer ---------- */
+footer #footer {
+	margin-bottom: 1rem;
+}
+
 footer .socials {
 	display: flex;
 	flex-direction: row;
@@ -394,6 +431,7 @@ footer .copyright * {
 
 footer .copyright p {
 	color: var(--primary-accent-light-pink);
+	transition: var(--std-transition);
 }
 
 /* scroll up button */
@@ -426,11 +464,11 @@ footer .button-link span {
 
 	/* ---------- main section ---------- */
 	#main {
-		margin: 10rem 0;
+		margin: 11rem 0;
 	}
 
-	#main h1 {
-		font-size: 2.5em;
+	.main-header {
+		font-size: 3em;
 	}
 
 	/* ---------- skills section ---------- */
@@ -445,17 +483,12 @@ footer .button-link span {
 
 	/* ---------- about section ---------- */
 	#about {
-		display: inline-block;
+		grid-template-rows: min-content min-content;
 	}
 
-	#about div:not(:first-child) {
-		margin-top: 3rem;
+	.contact, .about-me {
+		grid-row: span 1;
 	}
-	
-	.about-me {
-		width: 100%;
-	}
-
 	/* ---------- footer section ---------- */
 	footer {
 		display: none;
@@ -489,11 +522,11 @@ footer .button-link span {
 
 	/* ---------- main section ---------- */
 	#main {
-		margin: 18rem 0;
+		margin: 10rem 0;
 	}
 
-	#main h1 {
-		font-size: 5em;
+	.main-header {
+		font-size: 4em;
 	}
 
 	/* ---------- skills section ---------- */
@@ -504,6 +537,15 @@ footer .button-link span {
 
 	.skill {
 		min-width: 80%;
+	}
+
+	/* ---------- about section ---------- */
+	#about {
+		grid-template-rows: min-content min-content;
+	}
+
+	.contact, .about-me {
+		grid-row: span 1;
 	}
 
 	/* ---------- footer section ---------- */
@@ -538,26 +580,29 @@ footer .button-link span {
 
 	.nav-link:hover {
 		color: var(--primary-accent-pink);
-		transition: all .2s ease-in-out;
+		transition: var(--std-transition);
+	}
+
+	.skill:hover {
+		box-shadow: -8px 8px var(--primary-accent-brown);
+		transition: var(--std-transition);
+	}
+
+	.contact:hover, .about-me:hover {
+		box-shadow: -8px 8px var(--primary-accent-brown);
+		transition: var(--std-transition);
 	}
 
 	.socials a:hover {
 		color: var(--primary-accent-brown);
-		transition: all .2s ease-in-out;
+		transition: var(--std-transition);
 	}
 
-	.pj-img {
-		overflow: hidden;
+	footer .copyright p:hover {
+		color: var(--primary-font-colour);
+		transition: var(--std-transition);
 	}
 
-	.pj-img img {
-		transition: all 0.5s ease-in-out;
-	}
-
-	.pj-img img:hover {
-		transform: scale(1.05);
-		transition: all 0.5s ease-in-out;
-	}
 	/* ---------- main section ---------- */
 	
 	/* ---------- skills section ---------- */
@@ -575,6 +620,14 @@ footer .button-link span {
 	}
 
 	/* ---------- about section ---------- */
+	#about {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.contact, .about-me {
+		grid-column: span 1;
+	}
+
 	#about .contact, 
 	#about .about-me {
 		margin: 0 auto;

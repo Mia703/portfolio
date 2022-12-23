@@ -327,7 +327,6 @@ nav.navigation {
 
 /* project text container */
 .pj-text {
-	margin-top: 1rem;
 	padding: 1rem;
 }
 
@@ -464,11 +463,11 @@ footer .button-link span {
 
 	/* ---------- main section ---------- */
 	#main {
-		margin: 11rem 0;
+		margin: 9rem 0;
 	}
 
 	.main-header {
-		font-size: 3em;
+		font-size: 2em;
 	}
 
 	/* ---------- skills section ---------- */
@@ -488,6 +487,11 @@ footer .button-link span {
 
 	.contact, .about-me {
 		grid-row: span 1;
+	}
+
+	.contact h2 {
+		font-size: 18px;
+		text-align: center;
 	}
 	/* ---------- footer section ---------- */
 	footer {

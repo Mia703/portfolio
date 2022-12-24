@@ -1,6 +1,5 @@
 $(document).ready(function () {
 
-	// Open and close navigation
 	const nav = $("nav.navigation");
 	const open = $(".menu-toggle.open");
 	const close = $(".menu-toggle.close");

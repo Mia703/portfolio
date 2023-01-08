@@ -204,6 +204,10 @@ footer {
 	transition: var(--std-transition);
 }
 
+.subtext a {
+	text-decoration: underline;
+}
+
 /* scroll up button */
 .button-container {
 	display: flex;
@@ -262,7 +266,7 @@ footer .button-link span {
 		box-shadow: -4px 4px var(--primary-accent-brown);
 	}
 
-	footer p:hover {
+	footer p:hover, .subtext a:hover {
 		color: var(--primary-accent-pink);
 	}
 }
@@ -293,7 +297,7 @@ footer .button-link span {
 		box-shadow: -4px 4px var(--primary-accent-brown);
 	}
 
-	footer p:hover {
+	footer p:hover, .subtext a:hover {
 		color: var(--primary-accent-pink);
 	}
 

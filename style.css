@@ -1,0 +1,300 @@
+/* =================== imported fonts =================== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+/* ---------- sub-header ---------- */
+
+/* =================== global variables =================== */
+:root {
+	--primary-bg-colour: #FBEDED;
+	--primary-font-colour: #34282C;
+	--primary-accent-pink: #DF7C7D;
+	--primary-accent-light-pink: #E8CBCA;
+	--primary-accent-brown: #584346;
+	--primary-accent-white: #F5F5F5;
+
+	--std-transition: all 0.3s ease-in-out;
+	--std-border: 2px solid var(--primary-accent-brown);
+}
+
+/* =================== reset default styles =================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =================== base page styles =================== */
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--primary-bg-colour);
+	font-family: 'Playfair Display', serif;
+	color: var(--primary-font-colour);
+}
+
+/* =================== font styles =================== */
+/* main header */
+h1 {
+	font-weight: 500;
+	font-style: italic;
+}
+
+h2 {
+	font-size: 32px;
+}
+
+/* project titles */
+h3 {
+	font-size: 20px;
+	font-weight: 500;
+}
+
+p {
+	font-size: 16px;
+}
+
+a {
+	font-family: 'Playfair Display', serif;
+	color: var(--primary-font-colour);
+	text-decoration: none;
+}
+
+.button {
+	font-family: 'Playfair Display', serif;
+	font-size: 14px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+
+	background-color: var(--primary-accent-pink);
+	border: 2px solid var(--primary-accent-brown);
+	color: var(--primary-accent-white);
+	border-radius: 1000px;
+	padding: .3rem .8rem;
+	transition: var(--std-transition);
+}
+
+/* for buttons with <a> tags */
+.button-link {
+	font-family: 'Playfair Display', serif;
+	font-size: 14px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: var(--primary-accent-white);
+}
+
+/* =================== constants =================== */
+.main-grid {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	padding: 1rem;
+}
+
+section, footer {
+	grid-column: span 12;
+}
+
+/* ---------- main section ---------- */
+.main-header {
+	text-align: center;
+	padding-bottom: 1rem;
+	border-bottom: var(--std-border);
+}
+
+.socials-container * {
+	font-size: 12px;
+	text-transform: uppercase;
+	display: inline-block;
+	color: var(--primary-accent-pink);
+}
+
+.socials-container {
+	margin: .5rem 0 2rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: center;
+}
+
+/* ---------- project section ---------- */
+.project-container {
+	display: grid;
+	gap: 1rem;
+}
+
+.about-me {
+	display: flex;
+	align-items: center;
+}
+
+/* about me paragraph */
+.about-me p {
+	font-size: 1.5em;
+}
+
+.project {
+	grid-column: span 1;
+	height: max-content;
+	border-radius: 20px;
+	border: 2px solid var(--primary-accent-brown);
+	overflow: hidden;
+	box-shadow: 0px 4px var(--primary-accent-brown);
+	background-color: var(--primary-accent-light-pink);
+}
+
+.pj-img a {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+}
+
+/* project image */
+.pj-img img {
+	width: 100%;
+	border-bottom: 2px solid var(--primary-accent-brown);
+	transition: all 0.5s ease-in-out;
+}
+
+/* project text container */
+.pj-text {
+	padding: 1rem;
+}
+
+/* project header text */
+.pj-text .top {
+	padding-bottom: .5rem;
+}
+
+.pj-text .top p {
+	font-size: 14px;
+	font-weight: 400;
+}
+
+/* project buttons */
+.pj-text .bottom {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.pj-text .bottom {
+	padding-top: .5rem;
+}
+
+/* ---------- footer ---------- */
+footer {
+	margin-top: 2rem;
+}
+
+.text-container {
+	text-align: center;
+	margin: 1rem 0;
+}
+
+.text-container p, .text-container a {
+	font-size: 12px;
+	color: var(--primary-accent-light-pink);
+	transition: var(--std-transition);
+}
+
+/* scroll up button */
+.button-container {
+	display: flex;
+	justify-content: flex-end;
+}
+
+footer .button-link {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+footer .button-link span {
+	margin-left: .5rem;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+/* =================== media queries =================== */
+
+/* =================== MOBILE =================== */
+@media only screen and (max-width: 40em) {
+	h1 {
+		font-size: 4em;
+	}
+
+	.project-container {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+/* =================== TABLET =================== */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+	h1 {
+		font-size: 6em;
+	}
+
+	.project-container {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+	}
+
+	/* ---------- hover events ---------- */
+	.socials-container a:hover, .project-container .button:hover, footer .button:hover {
+		cursor: pointer;
+		transition: var(--std-transition);
+	}
+
+	.socials-container a:hover {
+		color: var(--primary-accent-brown);
+	}
+
+	.project-container .button:hover,
+	footer .button:hover {
+		box-shadow: -4px 4px var(--primary-accent-brown);
+	}
+
+	footer p:hover {
+		color: var(--primary-accent-pink);
+	}
+}
+
+/* =================== DESKTOP =================== */
+@media only screen and (min-width: 64.063em) {
+	h1 {
+		font-size: 8em;
+	}
+
+	.project-container {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+	}
+
+	/* ---------- hover events ---------- */
+	.socials-container a:hover, .project-container .button:hover, footer .button:hover {
+		cursor: pointer;
+		transition: var(--std-transition);
+	}
+
+	.socials-container a:hover {
+		color: var(--primary-accent-brown);
+	}
+
+	.project-container .button:hover,
+	footer .button:hover {
+		box-shadow: -4px 4px var(--primary-accent-brown);
+	}
+
+	footer p:hover {
+		color: var(--primary-accent-pink);
+	}
+
+}

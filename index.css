@@ -1,17 +1,10 @@
 
 /* =================== imported fonts =================== */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Unica+One&family=Yeseva+One&display=swap');
+
 
 /* =================== global variables =================== */
 :root {
-	--primary-bg-colour: #FBEDED;
-	--primary-font-colour: #34282C;
-	--primary-accent-pink: #DF7C7D;
-	--primary-accent-light-pink: #E8CBCA;
-	--primary-accent-brown: #584346;
-	--primary-accent-white: #F5F5F5;
 
-	--std-transition: all 0.2s ease-in-out;
 }
 
 /* =================== reset default styles =================== */

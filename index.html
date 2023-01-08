@@ -5,16 +5,15 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- favicon -->
-	<link rel="shortcut icon" href="./assets/favicon_io/favicon.ico" type="image/x-icon">
-
 	<title>Amya N Moore</title>
-
-	<link rel="stylesheet" href="index.css">
+	
+	<link rel="stylesheet" href="style.css">
 
 	<!-- google icons -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
 	
+	<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
 	<!-- jquery -->
 	<!-- import jquery -->
 	<script src="https://code.jquery.com/jquery-3.6.1.js" 
@@ -27,139 +26,63 @@
 </head>
 <body>
 
-	<!-- navigation overlay -->
-	<nav class="navigation" id="my_nav">
-		
-		<ul class="nav-list">
-			<button class="menu-toggle close">
-				<span class="material-symbols-outlined">close</span>
-			</button>
-			
-			<li class="nav-item">
-				<a href="index.html" class="nav-link">Home</a>
-			</li>
-			<li class="nav-item">
-				<a href="#skills" class="nav-link">Skills</a>
-			</li>
-			<li class="nav-item">
-				<a href="#projects" class="nav-link">Projects</a>
-			</li>
-			<li class="nav-item">
-				<a href="#about" class="nav-link">About</a>
-			</li>
-			<li class="nav-item">
-				<a href="#footer" class="nav-link">Contacts</a>
-			</li>
-		</ul>
-		
-	</nav>
-	
-	<botton class="mobile top">
-		<a href="#nav-header-top" class="button-link">
-			<span class="material-symbols-outlined">arrow_upward</span>
-		</a>
-	</botton>
-
 	<div class="main-grid">
-		
-		<!-- navigation header -->
-		<div class="nav-header" id="nav-header-top">
-			<div class="logo-container">
-				<h3>Amya N. Moore</h3>
-				<p>Web Developer</p>
-			</div>
-
-			<button class="menu-toggle open">
-				<span class="material-symbols-outlined">menu</span>
-			</button>
-		</div>
 
 		<!-- main section -->
 		<section id="main">
-			<h1 class="main-header">
-				Amya N. Moore, <br>
-				Web Developer
-			</h1>
-		</section>
 
-		<!-- skills section -->
-		<section id="skills">
-			<h1>Skills</h1>
-
-			<div class="skills-container">
-
-				<!-- figma -->
-				<div class="skill">
-					<div class="skill-text-container">
-						<h2>Figma</h2>
-					</div>
-					<div class="hastag">
-						<button class="button">Web Design</button>
-					</div>
-				</div>
-
-				<!-- html -->
-				<div class="skill">
-					<div class="skill-text-container">
-						<h2>HTML</h2>
-					</div>
-					<div class="hastag">
-						<button class="button">Web Development</button>
-					</div>
-				</div>
-
-				<!-- css -->
-				<div class="skill">
-					<div class="skill-text-container">
-						<h2>CSS</h2>
-					</div>
-					<div class="hastag">
-						<button class="button">Web Development</button>
-					</div>
-				</div>
-
-				<!-- jquery -->
-				<div class="skill">
-					<div class="skill-text-container">
-						<h2>jQery</h2>
-					</div>
-					<div class="hastag">
-						<button class="button">Web Development</button>
-					</div>
-				</div>
+			<h1 class="main-header">Amya Moore</h1>
+			
+			<!-- header table -->
+			<div class="socials-container">
+				<p>Front-End Developer</p>
+				<a href="https://www.linkedin.com/in/amya-moore-a0a0b6212" target="_blank">LinkedIn</a>
+				<a href="https://github.com/Mia703" target="_blank">GitHub</a>
+				<a href="./assets/2022-Moore-A-Resume.pdf" target="_blank">Resume</a>
+				<a href="mailto:amya.nicole.moore@gmail.com">Email</a>
 			</div>
-		</section>
 
+		</section>
+		
 		<!-- project section -->
 		<section id="projects">
-			<h1>Projects ( <span id="pj-total">X</span> )</h1>
-
+			
 			<div class="project-container">
 
-			<!-- calculator project -->
-			<div class="project">
-				<div class="pj-img">
-					<a href="https://mia703.github.io/FrontEndMentor----Calculator/" target="_blank" title="Click on me to open the live site!">
-						<img src="./assets/project images/Calculator.png" alt="">
-					</a>
+				<!-- about me paragraph -->
+				<div class="about-me">
+					<p>
+						Amya is currently an university student and an aspiring font-end web developer
+						located in Atlanta, Georgia. Majoring in computer science and visual arts,
+						she aims to create websites that are enjoyable, engaging, and accessable
+						as she grows as a person and as a developer.
+					</p>
 				</div>
 
-				<div class="pj-text">
-					<div class="top">
-						<h3>Theme Changing Calculator</h3>
-						<p>HTML/CSS/jQuery</p>
+				<!-- calculator project -->
+				<div class="project">
+					<div class="pj-img">
+						<a href="https://mia703.github.io/FrontEndMentor----Calculator/" target="_blank" title="Click on me to open the live site!">
+							<img src="./assets/project images/Calculator.png" alt="">
+						</a>
 					</div>
-					<div class="bottom">
-						<button class="button">
-							<a href="https://mia703.github.io/FrontEndMentor----Calculator/" class="button-link" target="_blank">View Project</a>
-						</button>
 
-						<button class="button">
-							<a href="https://github.com/Mia703/FrontEndMentor----Calculator" class="button-link" target="_blank">GitHub</a>
-						</button>
+					<div class="pj-text">
+						<div class="top">
+							<h3>Multi-Theme Calculator Site</h3>
+							<p>HTML/CSS/jQuery</p>
+						</div>
+						<div class="bottom">
+							<button class="button">
+								<a href="https://mia703.github.io/FrontEndMentor----Calculator/" class="button-link" target="_blank">View Project</a>
+							</button>
+
+							<button class="button">
+								<a href="https://github.com/Mia703/FrontEndMentor----Calculator" class="button-link" target="_blank">GitHub</a>
+							</button>
+						</div>
 					</div>
 				</div>
-			</div>
 
 				<!-- newspaper project -->
 				<div class="project">
@@ -171,7 +94,7 @@
 
 					<div class="pj-text">
 						<div class="top">
-							<h3>Responsive Newspaper Landing Page</h3>
+							<h3>Newspaper Landing Page</h3>
 							<p>HTML/CSS/CSS Grid</p>
 						</div>
 						<div class="bottom">
@@ -196,7 +119,7 @@
 
 					<div class="pj-text">
 						<div class="top">
-							<h3>Responsive Testimonial Grid</h3>
+							<h3>Testimonial Grid</h3>
 							<p>HTML/CSS/CSS Grid</p>
 						</div>
 						<div class="bottom">
@@ -221,7 +144,7 @@
 
 					<div class="pj-text">
 						<div class="top">
-							<h3>Responsive Space Tourism Page</h3>
+							<h3>Multi-Page Space Tourism Site</h3>
 							<p>HTML/CSS</p>
 						</div>
 						<div class="bottom">
@@ -246,7 +169,7 @@
 
 					<div class="pj-text">
 						<div class="top">
-							<h3>Multi-Page Responsive EasyBank Webpage</h3>
+							<h3>Multi-Page Site for Online Banking</h3>
 							<p>HTML/CSS/CSS Grid</p>
 						</div>
 						<div class="bottom">
@@ -265,75 +188,31 @@
 
 		</section>
 
-		<!-- about section -->
-		<section id="about">
-
-			<!-- contact me div -->
-			<div class="contact">
-				<h1>Email Me:</h1>
-				<a id="email" href="mailto:amya.nicole.moore@gmail.com">
-					<h2>amya.nicole.moore@gmail.com</h2>
-				</a>
-			</div>
-
-			<!-- about me paragraph -->
-			<div class="about-me">
-				<h1>A Little About Me:</h1>
-				<p>
-					Hello, my name is Amya, and I build websites! 
-					I am currently a dual degree student at Agnes Scott College and Emory University in Atlanta, Georgia, 
-					studying computer science and visual arts. 
-					While in school, I use what I have learned to further my own professional growth 
-					as a web developer. I aim to create websites that are 
-					enjoyable, colourful, engaging, and accessible. 
-					In the future, I intend to build even more intriguing websites as I continue to 
-					grow as a person and as a web developer.
-					<br>
-					<br>
-					<span class="subtext">
-						This website was built using HTML, CSS, and jQuery. The GitHub repo is here:
-						<a href="https://github.com/Mia703/portfolio" target="_blank">Link</a>.
-					</span>
-				</p>
-			</div>
-		</section>
-
 		<!-- footer section -->
 		<footer id="footer">
-			
-			<!-- social links -->
-			<div class="socials">
-				<p>
-					<a href="https://www.linkedin.com/in/amya-moore-a0a0b6212" target="_blank">LinkedIn</a>
-				</p>
-
-				<p>
-					<a href="https://github.com/Mia703" target="_blank">GitHub</a>
-				</p>
-
-				<p>
-					<a href="./assets/Resume.pdf" download>
-						Resume
-						<span class="material-symbols-outlined">download</span>
-					</a>
-				</p>
-			</div>
-
-			<hr id="hr-line">
-
-			<!-- copyright div -->
-			<div class="copyright">
-				<p>
-					© 2022 - All Rights Reserved
-				</p>
-
+			<div class="button-container">
 				<button id="up" class="button">
-					<a href="#nav-header-top" class="button-link">
+					<a href="#main" class="button-link">
 						scroll to Top
 						<span class="material-symbols-outlined">arrow_upward</span>
 					</a>
 				</button>
 			</div>
+
+			<div class="text-container">
+				<!-- copyright div -->
+				<div class="copyright">
+					<p>© 2022 - All Rights Reserved</p>
+				</div>
+				<div class="subtext">
+					<p>
+						This website was built using HTML, CSS, and jQuery. The GitHub repo. is
+						<a href="https://github.com/Mia703/portfolio" target="_blank">here</a>.
+					</p>
+				</div>
+			</div>
+
+
 		</footer>
 
 	</div>

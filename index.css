@@ -66,7 +66,7 @@ a {
 	font-weight: 400;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-
+	
 	background-color: var(--primary-accent-pink);
 	border: 2px solid var(--primary-accent-brown);
 	color: var(--primary-accent-white);
@@ -76,14 +76,14 @@ a {
 }
 
 /* for buttons with <a> tags */
-.button-link {
+/* .button-link {
 	font-family: 'Playfair Display', serif;
 	font-size: 14px;
 	font-weight: 400;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	color: var(--primary-accent-white);
-}
+} */
 
 /* =================== constants =================== */
 .main-grid {

@@ -76,14 +76,14 @@ a {
 }
 
 /* for buttons with <a> tags */
-/* .button-link {
+.button-link {
 	font-family: 'Playfair Display', serif;
 	font-size: 14px;
 	font-weight: 400;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	color: var(--primary-accent-white);
-} */
+}
 
 /* =================== constants =================== */
 .main-grid {

@@ -56,7 +56,7 @@ const projects_list = [
 	{
 		key: 9,
 		name: "Digital Marketing",
-		tag: "Figma",
+		tag: "Figma, Digital Signage, Posters",
 		link: "https://www.figma.com/file/Zu124QeUExsqOQbnNhOYVX/DU-%26-VMC-Digital-Signage-Workspace?type=design&node-id=317%3A2&mode=design&t=6tBqfkFQNPjxaEFD-1",
 	},
 	{

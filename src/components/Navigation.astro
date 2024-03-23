@@ -1,0 +1,109 @@
+---
+let line_height = 5;
+let line_width = 20;
+---
+
+<div class="navigation-container">
+	<a href="./" id="logo" class="em">ANM</a>
+
+	<button class="navigation-button mobile">
+		<svg viewBox="0 0 100 80" width="40" height="40" id="hamburger">
+			<rect width="100" height={line_height}></rect>
+			<rect y={line_width} width="100" height={line_height}></rect>
+			<rect y={line_width * 2} width="100" height={line_height}></rect>
+		</svg>
+	</button>
+
+	<div class="navigation-container desktop">
+		<ul class="nav-list">
+			<li class="nav-item em">
+				<a href="./" class="nav-link desktop">Home</a>
+			</li>
+			<li class="nav-item em">
+				<a href="#about" class="nav-link desktop">About</a>
+			</li>
+			<li class="nav-item em">
+				<a href="#projects" class="nav-link desktop">Projects</a>
+			</li>
+			<li class="nav-item em">
+				<a href="#exp" class="nav-link desktop">Experience</a>
+			</li>
+			<li class="nav-item em">
+				<a href="#connect" class="nav-link desktop">Contact</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<style>
+	/* ---------- font styles ---------- */
+	a {
+		text-decoration: none;
+	}
+
+	li {
+		margin-right: 2rem;
+	}
+
+	/* ---------- mobile ---------- */
+	.navigation-container {
+		grid-column: span 4;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: start;
+	}
+
+	.navigation-button {
+		width: min-content;
+		height: min-content;
+		background-color: var(--main-colour-black);
+		border: none;
+		transition: none;
+		transform: none;
+	}
+
+	#hamburger {
+		stroke: var(--main-colour-white);
+		fill: var(--main-colour-white);
+	}
+
+	.desktop {
+		display: none;
+		visibility: hidden;
+	}
+
+	.nav-list {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+
+	.nav-item {
+		list-style: none;
+	}
+	/* =================== TABLET =================== */
+	@media only screen and (min-width: 40.063em) {
+		.navigation-container {
+			grid-column: span 6;
+		}
+	}
+
+	/* =================== DESKTOP =================== */
+	@media only screen and (min-width: 64.063em) {
+		.navigation-container {
+			grid-column: span 12;
+		}
+
+		.mobile {
+			display: none;
+			visibility: hidden;
+		}
+
+		.desktop {
+			display: block;
+			visibility: visible;
+		}
+	}
+</style>

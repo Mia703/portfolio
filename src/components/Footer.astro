@@ -1,0 +1,59 @@
+---
+const date = new Date().getFullYear();
+---
+
+<footer id="footer">
+	<p>
+		<span>&#169</span>
+		{date} to {date}. Designed and developed by Amya Moore. All rights reserved.
+		<div class="license">
+			<p>
+				This site is licensed under
+				<a
+					href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1"
+					target="_blank"
+					rel="license noopener noreferrer"
+					class="em"
+					>Attribution-NonCommercial-ShareAlike 4.0 International
+				</a>
+			</p>
+		</div>
+	</p>
+</footer>
+
+<style>
+	footer {
+		grid-column: span 4;
+		margin-top: 3rem;
+		text-transform: capitalize;
+		text-align: center;
+		color: var(--main-colour-grey);
+	}
+
+	.license {
+		font-size: 0.8em;
+		color: var(--main-colour-grey);
+	}
+
+	.license a {
+		color: var(--main-colour-grey);
+	}
+
+	/* =================== TABLET =================== */
+	@media only screen and (min-width: 40.063em) {
+		footer {
+			grid-column: span 6;
+		}
+	}
+
+	/* =================== DESKTOP =================== */
+	@media only screen and (min-width: 64.063em) {
+		footer {
+			grid-column: 2 / 12;
+		}
+
+		footer p {
+			font-size: 0.9em;
+		}
+	}
+</style>

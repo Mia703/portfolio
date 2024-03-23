@@ -1,0 +1,100 @@
+---
+import EXPERIENCE from "../data/experience-data.js";
+import Resume from "../../public/documents/2023-Dec-Resume.pdf";
+---
+
+<section class="experience-container">
+	<h1 id="exp">Experience</h1>
+	<div class="experience-grid">
+		{
+			EXPERIENCE.map((item: { position: unknown; company: unknown; date: unknown; }): string => (
+				<div class="position-item">
+					<p class="position-name">{item.position}</p>
+					<p class="position-company">{item.company}</p>
+					<p class="position-date">{item.date}</p>
+				</div>
+			))
+		}
+	</div>
+	
+	<!--  TODO: add resume to repo -->
+	<a href={ Resume } target="_blank">
+		<button>See Full Resume <span>&#8594;</span></button>
+	</a>
+</section>
+
+<style>
+	.experience-container {
+		grid-column: span 4;
+	}
+
+	.experience-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 10px;
+		margin-bottom: 1rem;
+	}
+
+	.position-item {
+		margin-bottom: 1rem;
+	}
+
+	.position-name {
+		font-size: 1.1em;
+		font-weight: 600;
+	}
+
+	.position-company {
+		font-size: 1em;
+	}
+
+	.position-date {
+		font-size: 0.9em;
+		color: var(--main-colour-grey);
+	}
+
+	button {
+		text-transform: uppercase;
+		background-color: var(--main-colour-black);
+		border: 1px solid var(--main-colour-grey);
+		color: var(--main-colour-grey);
+	}
+
+	button:hover {
+		color: var(--main-colour-black);
+		background-color: var(--main-colour-white);
+		border-color: var(--main-colour-white);
+	}
+
+	/* =================== TABLET =================== */
+	@media only screen and (min-width: 40.063em) {
+		.experience-container {
+			grid-column: span 6;
+		}
+
+		.experience-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	/* =================== DESKTOP =================== */
+	@media only screen and (min-width: 64.063em) {
+		.experience-container {
+			grid-column: 2 / 12;
+		}
+
+		.position-name {
+			font-size: 1.2em;
+			font-weight: 600;
+		}
+
+		.position-company {
+			font-size: 1.1em;
+		}
+
+		.position-date {
+			font-size: 0.9em;
+			color: var(--main-colour-grey);
+		}
+	}
+</style>

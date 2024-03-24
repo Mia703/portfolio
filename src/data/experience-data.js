@@ -1,9 +1,15 @@
 const work_history_list = [
 	{
-		key: 3,
-		position: "Digital Marketing and Design Assistant",
-		company: "University of Denver, School of Art and Art History",
-		date: "September 2023 - Present",
+		key: 0,
+		position: "Props and Painting Assistant",
+		company: "Emory University, Theatre Emory",
+		date: "August 2022 - May 2023",
+	},
+	{
+		key: 1,
+		position: "Part-time Store Associate",
+		company: "Khols",
+		date: "June 2023 - July 2023",
 	},
 	{
 		key: 2,
@@ -12,19 +18,14 @@ const work_history_list = [
 		date: "September 2023 - Present",
 	},
 	{
-		key: 1,
-		position: "Props and Painting Assistant",
-		company: "Emory University, Theatre Emory",
-		date: "August 2022 - May 2023",
-	},
-	{
-		key: 0,
-		position: "Part-time Store Associate",
-		company: "Khols",
-		date: "June 2023 - July 2023",
+		key: 3,
+		position: "Digital Marketing and Design Assistant",
+		company: "University of Denver, School of Art and Art History",
+		date: "September 2023 - Present",
 	},
 ];
 
-const most_recent_positions = work_history_list.slice(0, 4);
+// copy the list, cut it to the first four entries, and reverse it
+const most_recent_positions = work_history_list.slice(0, 4).reverse();
 
 export default most_recent_positions;

@@ -49,18 +49,12 @@ const projects_list = [
 	},
 	{
 		key: 8,
-		name: "URL Shortener",
-		tag: "React & Next.js",
-		link: "https://mia703.github.io/URL-Shortener/",
-	},
-	{
-		key: 9,
 		name: "Digital Marketing",
-		tag: "Figma, Digital Signage, Posters",
+		tag: "Figma, Digital Signage & Posters",
 		link: "https://www.figma.com/file/Zu124QeUExsqOQbnNhOYVX/DU-%26-VMC-Digital-Signage-Workspace?type=design&node-id=317%3A2&mode=design&t=6tBqfkFQNPjxaEFD-1",
 	},
 	{
-		key: 10,
+		key: 9,
 		name: "PanelSync, Book Tracker App",
 		tag: "Full-Stack App, Firebase, Supabase",
 		link: "https://panelsync.vercel.app/",

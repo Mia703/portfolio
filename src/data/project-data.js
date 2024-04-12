@@ -31,9 +31,9 @@ const projects_list = [
 	},
 	{
 		key: 5,
-		name: "3D Calculator",
-		tag: "Spline 3D",
-		link: "https://stackblitz.com/edit/withastro-astro-ueuzmv?file=README.md",
+		name: "Simple Calculator",
+		tag: "HTML, CSS, JS, Astro",
+		link: "https://small-personal-calculator.vercel.app/",
 	},
 	{
 		key: 6,
@@ -55,6 +55,12 @@ const projects_list = [
 	},
 	{
 		key: 9,
+		name: "Annual SAAH Newsletter",
+		tag: "Marketing, Copywriting",
+		link: "https://drive.google.com/file/d/1rrl67SymhE1FFCIu4yvLCVgaEbmvTUw4/view?usp=sharing",
+	},
+	{
+		key: 10,
 		name: "PanelSync, Book Tracker App",
 		tag: "Full-Stack App, Firebase, Supabase",
 		link: "https://panelsync.vercel.app/",

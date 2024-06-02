@@ -15,22 +15,25 @@ const {
 <!doctype html>
 <html lang="en">
 	<head>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-FV6JR9MP030"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+
+			gtag("config", "G-FV^JR9MP03");
+		</script>
 		<meta charset="UTF-8" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="description" content={description} />
 		<meta name="author" content="Amya Moore" />
-		<link rel="icon" type="image/svg+xml" href={ favicon } />
+		<link rel="icon" type="image/svg+xml" href={favicon} />
 		<title>{title}</title>
 	</head>
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-FV6JR9MP030"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
 
-		gtag('config', 'G-FV^JR9MP03');
-	</script>
 	<body>
 		<slot />
 	</body>
@@ -133,11 +136,9 @@ const {
 
 	/* =================== TABLET =================== */
 	@media only screen and (min-width: 40.063em) {
-	
 	}
 
 	/* =================== DESKTOP =================== */
 	@media only screen and (min-width: 64.063em) {
-	
 	}
 </style>

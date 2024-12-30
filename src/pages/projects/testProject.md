@@ -1,26 +1,23 @@
 ---
 layout: ../../layouts/ProjectLayout.astro
-tab_title: 'My First Blog Post'
-description: 'This is the first post of my new Astro blog.'
-pubDate: 2022-07-01
-author: 'Astro Learner'
-image:
+title: 'Test Project'
+languages: 'NextJS, ReactJS, ...'
+date: 'Month 2024'
+summary: 'Lorem ipsum odor amet, consectetuer adipiscing elit. Rutrum netus a praesent faucibus primis nostra arcu risus sollicitudin.'
+header_image:
     url: 'https://docs.astro.build/assets/rose.webp'
-    alt: 'The Astro logo on a dark background with a pink glow.'
+    alt: 'Astro default image'
+links:
+    live_url: 'https://www.google.com/'
+    github_url: 'https://www.google.com/'
 ---
 
-# My First Blog Post
+### What I've Learned
 
-Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
+[content here]
 
-## What I've accomplished
+<br />
 
-1. **Installing Astro**: First, I created a new Astro project and set up my online accounts.
+### What's next
 
-2. **Making Pages**: I then learned how to make pages by creating new `.astro` files and placing them in the `src/pages/` folder.
-
-3. **Making Blog Posts**: This is my first blog post! I now have Astro pages and Markdown posts!
-
-## What's next
-
-I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
+[content here]

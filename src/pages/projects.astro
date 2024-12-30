@@ -1,0 +1,25 @@
+---
+import Navigation from "../components/Navigation.astro";
+import Layout from "../layouts/Layout.astro";
+import projects_list from "../data/projects-list";
+import Project from "../components/Project.astro";
+---
+
+<Layout>
+	<Navigation current="projects" />
+	<div
+		class="project-wrapper col-span-4 md:col-span-6 lg:col-span-10 lg:col-start-2"
+	>
+		<div class="projects-grid md:grid md:grid-cols-2 md:gap-4 lg:grid-cols-3">
+			{
+				projects_list.map((project) => (
+					<Project
+						title={project.name}
+						description={project.description}
+						link={project.link}
+					/>
+				))
+			}
+		</div>
+	</div>
+</Layout>

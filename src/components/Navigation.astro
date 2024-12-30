@@ -1,0 +1,104 @@
+---
+const { current } = Astro.props;
+---
+
+<div
+	id="navigation-wrapper"
+	class="col-span-4 mb-4 md:col-span-6 lg:col-span-12"
+>
+	<nav id="main-navigation" class="flex flex-row justify-between">
+		<a
+			href="/"
+			id="logo"
+			class="font-medium transition-colors ease-in hover:text-primaryYellow"
+			>AM</a
+		>
+		<ul class="nav-list flex flex-row justify-between">
+			<li class="nav-item">
+				{
+					current == "home" ? (
+						<a
+							href="/"
+							class="nav-link mx-1 border-b-2 border-primaryDarkGrey pb-2 transition-all ease-in hover:border-primaryYellow md:mx-3"
+						>
+							Home
+						</a>
+					) : (
+						<a
+							href="/"
+							class="nav-link mx-1 border-b-2 border-transparent pb-2 transition-all ease-in hover:border-primaryYellow md:mx-3"
+						>
+							Home
+						</a>
+					)
+				}
+			</li>
+			<li class="nav-item">
+				{
+					current == "about" ? (
+						<a
+							href="/about"
+							class="nav-link mx-1 border-b-2 border-primaryDarkGrey pb-2 transition-all ease-in hover:border-primaryYellow md:mx-3"
+						>
+							About
+						</a>
+					) : (
+						<a
+							href="/about"
+							class="nav-link mx-1 border-b-2 border-transparent pb-2 transition-all ease-in hover:border-primaryYellow md:mx-3"
+						>
+							About
+						</a>
+					)
+				}
+			</li>
+			<li class="nav-item">
+				{
+					current == "projects" ? (
+						<a
+							href="/projects"
+							class="nav-link mx-1 border-b-2 border-primaryDarkGrey pb-2 transition-all ease-in hover:border-primaryYellow md:mx-3"
+						>
+							Projects
+						</a>
+					) : (
+						<a
+							href="/projects"
+							class="nav-link mx-1 border-b-2 border-transparent pb-2 transition-all ease-in hover:border-primaryYellow md:mx-3"
+						>
+							Projects
+						</a>
+					)
+				}
+			</li>
+			<li class="nav-item">
+				{
+					current == "experience" ? (
+						<a
+							href="/experience"
+							class="nav-link mx-1 border-b-2 border-primaryDarkGrey pb-2 transition-all ease-in hover:border-primaryYellow md:mx-3"
+						>
+							Experience
+						</a>
+					) : (
+						<a
+							href="/experience"
+							class="nav-link mx-1 border-b-2 border-transparent pb-2 transition-all ease-in hover:border-primaryYellow md:mx-3"
+						>
+							Experience
+						</a>
+					)
+				}
+			</li>
+			<li class="nav-item">
+				<a
+					href="mailto:amya.nicole.moore@gmail.com?subject=Let's Connect!"
+					class="flex flex-row justify-end"
+				>
+					Contact Me
+					<span><img src="../assets/arrow.svg" alt="" /></span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</div>

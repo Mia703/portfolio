@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    src: url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+  }
+
+  /* ---------- HEADING 1 ---------- */
+  h1 {
+    /* default size */
+    @apply text-4xl;
+    @apply text-primaryWhite;
+    @apply font-bold;
+  }
+
+  @screen md {
+    h1 {
+      @apply text-5xl;
+    }
+  }
+
+  @screen lg {
+    h1 {
+      @apply text-6xl;
+    }
+  }
+
+  /* ---------- HEADING 2 ---------- */
+  h2 {
+    @apply text-3xl;
+    @apply text-primaryLightGrey;
+    @apply font-bold;
+  }
+
+  /* ---------- HEADING 3 ---------- */
+  h3 {
+    @apply text-xl;
+    @apply text-primaryDarkGrey;
+    @apply font-semibold;
+  }
+
+  /* ---------- PARAGRAPH ---------- */
+  p,
+  a {
+    @apply text-base;
+    @apply text-primaryWhite;
+  }
+}

@@ -1,0 +1,47 @@
+---
+const { degree, major, minor, institution, date, coursework } = Astro.props;
+---
+
+<div class="education-wrapper group my-8">
+	<div class="grid grid-cols-[1fr_max-content] md:gap-4">
+		<div class="degree-wrapper col-span-2 md:col-span-1">
+			<p
+				class="text-sm font-medium text-primaryDarkGrey transition-all ease-in-out group-hover:text-primaryWhite"
+			>
+				{degree} in
+			</p>
+			<p
+				class="font-bold text-primaryDarkGrey transition-all ease-in-out group-hover:text-primaryWhite"
+			>
+				{major}
+			</p>
+			{
+				minor != "" ? (
+					<p class="font-semibold italic text-primaryDarkGrey transition-all ease-in-out group-hover:text-primaryWhite">
+						{minor}
+					</p>
+				) : (
+					<p />
+				)
+			}
+		</div>
+		<div class="institution-wrapper col-span-2 md:col-span-1 md:text-right">
+			<p
+				class="text-primaryDarkGrey transition-all ease-in-out group-hover:text-primaryWhite"
+			>
+				{institution}
+			</p>
+			<p
+				class="text-primaryDarkGrey transition-all ease-in-out group-hover:text-primaryWhite"
+			>
+				{date}
+			</p>
+		</div>
+	</div>
+	<p
+		class="my-2 capitalize text-primaryDarkGrey transition-all ease-in-out group-hover:text-primaryLightGrey"
+	>
+		<span class="font-semibold">Coursework:</span>
+		{coursework}.
+	</p>
+</div>

@@ -1,22 +1,40 @@
+---
+import "../global.css";
+
+const pageInformation = {
+	title: "Amya Moore",
+	description: "Amya's Personal Portfolio",
+	favicon: "",
+};
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<meta name="description" content={pageInformation.description} />
+		<link
+			rel="shortcut icon"
+			href={pageInformation.favicon}
+			type="image/x-icon"
+		/>
+		<title>{pageInformation.title}</title>
 	</head>
-	<body>
-		<slot />
+	<body class="bg-primaryBlack text-primaryWhite">
+		<div
+			id="main-grid"
+			class="grid grid-cols-4 gap-4 p-4 md:grid-cols-6 lg:grid-cols-12"
+		>
+			<slot />
+		</div>
 	</body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+	html {
+		scroll-behavior: smooth;
 	}
 </style>

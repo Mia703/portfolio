@@ -1,0 +1,68 @@
+---
+import Navigation from "../components/Navigation.astro";
+import positions_list from "../data/positions_list";
+import Layout from "../layouts/Layout.astro";
+import Position from "../components/Position.astro";
+import education_list from "../data/education_list";
+import Education from "../components/Education.astro";
+---
+
+<Layout>
+	<Navigation current="experience" />
+	<main class="wrapper col-span-4 md:col-span-6 lg:col-span-12">
+		<div class="contact-wrapper border-b-2 border-primaryDarkGrey p-4">
+			<h1>Amya Moore</h1>
+			<ul class="contact-list mt-2">
+				<li class="contact-item flex flex-row justify-start items-center">
+					<img src="../assets/mail.svg" alt="mail icon" class="w-[1rem]" />
+					<a href="mailto:amya.nicole.moore@gmail.com" class="mx-2">
+						amya.nicole.moore@gmail.com
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="grid-wrapper md:grid md:grid-cols-2">
+			<div class="experience-wrapper p-4 md:col-span-2 md:p-6 lg:col-span-1">
+				<h3 class="text-primaryWhite">Work Experience</h3>
+				{
+					positions_list.map((exp) => (
+						<Position
+							position={exp.position}
+							company={exp.company}
+							location={exp.location}
+							date={exp.date}
+							description={exp.description}
+						/>
+					))
+				}
+			</div>
+
+			<div
+				class="education-wrapper p-4 md:col-span-2 md:border-t-2 md:border-primaryDarkGrey md:p-6 lg:col-span-1 lg:border-l-2 lg:border-t-0"
+			>
+				<h3 class="text-primaryWhite">Education</h3>
+				{
+					education_list.map((edu) => (
+						<Education
+							degree={edu.degree}
+							major={edu.major}
+							minor={edu.minor}
+							institution={edu.institution}
+							date={edu.date}
+							coursework={edu.coursework}
+						/>
+					))
+				}
+				<h3 class="text-primaryWhite">Technical Skills</h3>
+				<p
+					class="my-8 text-primaryDarkGrey transition-all ease-in-out hover:text-primaryWhite"
+				>
+					HTML, CSS, JavaScript, jQuery, ReactJS, NextJS, Tailwind CSS, Figma,
+					Adobe Express, Supabase, Firebase, Git, GitHub, Vercel, Agile, SCRUM,
+					TypeScript
+				</p>
+			</div>
+		</div>
+	</main>
+</Layout>

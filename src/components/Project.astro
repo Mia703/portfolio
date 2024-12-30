@@ -1,0 +1,22 @@
+---
+const { title, description, link } = Astro.props;
+---
+
+<div
+	class="project-wrapper group my-2 rounded-md border-[1px] border-primaryDarkGrey bg-primaryBlack p-2 transition-all ease-in-out hover:-translate-y-1 hover:cursor-pointer hover:border-primaryYellow"
+>
+	<a href={link} class="flex flex-row items-center justify-between">
+		<div class="text-wrapper">
+			<h3
+				class="capitalize transition-all ease-in-out group-hover:text-primaryWhite"
+			>
+				{title}
+			</h3>
+			<p
+				class="text-primaryDarkGrey transition-all ease-in-out group-hover:text-primaryWhite"
+			>
+				{description}.
+			</p>
+		</div>
+	</a>
+</div>

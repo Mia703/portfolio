@@ -1,0 +1,37 @@
+---
+const { position, company, location, date, description } = Astro.props;
+---
+
+<div class="position-wrapper group my-8">
+	<div class="grid grid-cols-2 md:gap-4">
+		<div class="col-span-2 md:col-span-1">
+			<p
+				class="font-semibold text-primaryDarkGrey transition-all ease-in-out group-hover:text-primaryWhite"
+			>
+				{position}
+			</p>
+			<p
+				class="mr-4 font-semibold italic text-primaryDarkGrey transition-all ease-in-out group-hover:text-primaryWhite"
+			>
+				{company}
+			</p>
+		</div>
+		<div class="col-span-2 md:col-span-1 md:text-right">
+			<p
+				class="text-primaryDarkGrey transition-all ease-in-out group-hover:text-primaryWhite"
+			>
+				{location}
+			</p>
+			<p
+				class="text-primaryDarkGrey transition-all ease-in-out group-hover:text-primaryWhite"
+			>
+				{date}
+			</p>
+		</div>
+	</div>
+	<p
+		class="my-2 text-primaryDarkGrey transition-all ease-in-out group-hover:text-primaryLightGrey"
+	>
+		{description}
+	</p>
+</div>

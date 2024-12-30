@@ -10,8 +10,10 @@ const selected_projects = ProjectsList.slice(0, 3);
 <Layout>
 	<Navigation current="home" />
 
-	<main class="col-span-4 md:col-span-6 lg:col-span-12 flex flex-row justify-between items-center h-[80vh]">
-		<div class="left-wrapper p-4">
+	<main
+		class="col-span-4 grid h-[80vh] grid-cols-2 gap-4 md:col-span-6 lg:col-span-12"
+	>
+		<div class="left-wrapper flex flex-col items-center justify-center p-4">
 			<h1 class="title mb-8 capitalize">
 				Amya Moore <br /> junior front-end web developer
 			</h1>
@@ -25,9 +27,7 @@ const selected_projects = ProjectsList.slice(0, 3);
 				out - I'd love to connect and hear from you!
 			</p>
 		</div>
-		<div
-			class="right-wrapper flex w-full flex-col justify-center p-4"
-		>
+		<div class="right-wrapper flex w-full flex-col justify-center p-4">
 			<h2 class="mb-4">Selected Projects</h2>
 			{
 				selected_projects.map((project) => (

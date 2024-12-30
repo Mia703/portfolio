@@ -10,35 +10,34 @@ const selected_projects = ProjectsList.slice(0, 3);
 <Layout>
 	<Navigation current="home" />
 
-	<div
-		class="left-wrapper col-span-4 w-full p-4 md:col-span-3 lg:col-span-8 lg:p-10"
-	>
-		<h1 class="title my-5 capitalize">
-			Amya Moore <br /> junior front-end web developer
-		</h1>
-		<p class="my-2 lg:w-[55ch]">
-			Hello, I'm Amya <span class="italic">(ah-my-ya)</span>, a junior front-end
-			developer passionate about crafting engaging user experiences. My academic
-			journey has been dedicated to building the knowledge and skills for this
-			role, and I'm always eager to learn more. As a recent master's graduate,
-			I'm actively seeking full-time opportunities worldwide. Feel free to
-			explore my portfolio and don't hesitate to reach out - I'd love to connect
-			and hear from you!
-		</p>
-	</div>
-
-	<div
-		class="right-wrapper col-span-4 flex w-full flex-col justify-center p-4 md:col-span-3 lg:col-span-4"
-	>
-		<h2 class="mb-2">Selected Projects</h2>
-		{
-			selected_projects.map((project) => (
-				<Project
-					title={project.name}
-					description={project.description}
-					link={project.link}
-				/>
-			))
-		}
-	</div>
+	<main class="col-span-4 md:col-span-6 lg:col-span-12 flex flex-row justify-between items-center h-[80vh]">
+		<div class="left-wrapper p-4">
+			<h1 class="title mb-8 capitalize">
+				Amya Moore <br /> junior front-end web developer
+			</h1>
+			<p class="lg:w-[55ch]">
+				Hello, I'm Amya <span class="italic">(ah-my-ya)</span>, a junior
+				front-end developer passionate about crafting engaging user experiences.
+				My academic journey has been dedicated to building the knowledge and
+				skills for this role, and I'm always eager to learn more. As a recent
+				master's graduate, I'm actively seeking full-time opportunities
+				worldwide. Feel free to explore my portfolio and don't hesitate to reach
+				out - I'd love to connect and hear from you!
+			</p>
+		</div>
+		<div
+			class="right-wrapper flex w-full flex-col justify-center p-4"
+		>
+			<h2 class="mb-4">Selected Projects</h2>
+			{
+				selected_projects.map((project) => (
+					<Project
+						title={project.name}
+						description={project.description}
+						link={project.link}
+					/>
+				))
+			}
+		</div>
+	</main>
 </Layout>

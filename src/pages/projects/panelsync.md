@@ -1,9 +1,9 @@
 ---
 layout: ../../layouts/ProjectLayout.astro
 title: 'PanelSync'
-languages: 'NextJS, ReactJS'
-date: 'Jan 2024'
-summary: ''
+languages: 'NextJS, ReactJS, Firebase, Formik, Yup, Supabase'
+date: 'Mar 2024'
+summary: 'A full-stack book tracking web application designed to help users monitor their reading progress.'
 header_image:
     url: ''
     alt: ''
@@ -14,12 +14,4 @@ links:
 
 ### What I've Learned
 
-[content here]
-
-<br />
-
-### What's next
-
-[content here]
-
-
+Created for the Master's course ICT 4300: Web Systems and Information, the following project was created to help readers track their reading progress. Authentication, search, and filtering of books was provided.

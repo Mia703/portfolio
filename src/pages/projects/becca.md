@@ -1,17 +1,25 @@
 ---
-tab_title: "Becca: A Fashion Chatbot"
-description: ""
-pubDate: 2024-12-30
-author: "Amya Moore"
-image:
+layout: ../../layouts/ProjectLayout.astro
+title: 'Becca'
+languages: 'Python, Emora STDM, NLP, OpenAi API'
+date: 'Month 2024'
+summary: 'A Python-based AI clothing recommendation chatbot.'
+header_image:
     url: ''
     alt: ''
+links:
+    live_url: ''
+    github_url: 'https://github.com/Mia703/Becca-Fashion-Chatbot-Repo'
 ---
 
-# Becca: A Fashion Chatbot
+### What I've Learned
 
-## Project Overview
+[content here]
 
-Everyone wants to look their best...
+<br />
 
-https://github.com/Mia703/Becca-Fashion-Chatbot-Repo
+### What's next
+
+[content here]
+
+

@@ -13,7 +13,9 @@ const selected_projects = ProjectsList.slice(0, 3);
 	<main
 		class="col-span-4 grid h-[80vh] grid-cols-2 gap-4 md:col-span-6 lg:col-span-12"
 	>
-		<div class="left-wrapper flex flex-col justify-center p-8">
+		<div
+			class="left-wrapper col-span-2 flex flex-col justify-center p-8 md:col-span-1"
+		>
 			<h1 class="title mb-8 capitalize">
 				Amya Moore <br /> junior front-end web developer
 			</h1>
@@ -23,13 +25,15 @@ const selected_projects = ProjectsList.slice(0, 3);
 				My academic journey has been dedicated to building the knowledge and
 				skills for this role, and I'm always eager to learn more. As a recent
 				master's graduate, I'm actively seeking <span class="font-semibold">
-					full-time opportunities
-					worldwide
+					full-time opportunities worldwide
 				</span>. Feel free to explore my portfolio and don't hesitate to reach
 				out - I'd love to connect and hear from you!
 			</p>
 		</div>
-		<div class="right-wrapper flex w-full flex-col justify-center p-8">
+
+		<div
+			class="right-wrapper col-span-2 flex w-full flex-col justify-center p-8 md:col-span-1"
+		>
 			<h2 class="mb-4">Selected Projects</h2>
 			{
 				selected_projects.map((project) => (

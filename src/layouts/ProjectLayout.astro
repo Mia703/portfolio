@@ -53,26 +53,38 @@ const { frontmatter } = Astro.props;
 				</p>
 
 				<div class="links-wrapper my-2 text-right">
-					<a
-						href={frontmatter.links.live_url}
-						class="flex flex-row items-center font-semibold"
-						target="_blank"
-					>
-						Live Site
-						<img src="/arrow.svg" alt="arrow icon" />
-					</a>
-					<a
-						href={frontmatter.links.github_url}
-						class="flex flex-row items-center font-semibold"
-						target="_blank"
-					>
-						GitHub Repo
-						<img src="/arrow.svg" alt="arrow icon" />
-					</a>
+					{
+						frontmatter.links.live_url != "" ? (
+							<a
+								href={frontmatter.links.live_url}
+								class="flex flex-row items-center font-semibold"
+								target="_blank"
+							>
+								Live Site
+								<img src="/arrow.svg" alt="arrow icon" />
+							</a>
+						) : (
+							<a href="" />
+						)
+					}
+					{
+						frontmatter.links.github_url != "" ? (
+							<a
+								href={frontmatter.links.live_url}
+								class="flex flex-row items-center font-semibold"
+								target="_blank"
+							>
+								GitHub Repo
+								<img src="/arrow.svg" alt="arrow icon" />
+							</a>
+						) : (
+							<a href="" />
+						)
+					}
 				</div>
 			</div>
 		</div>
-		
+
 		<!-- MD content placed below -->
 		<slot />
 	</main>

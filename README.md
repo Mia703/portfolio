@@ -112,7 +112,6 @@ Using the `group` and `group-hover` modifiers.
 
 ## Creating a Photo Album in Astro
 
-Using `content collections` in Astro.
+Using `Cloudinary` and Astro
 
-https://docs.astro.build/en/guides/content-collections/
-
+https://youtu.be/Bfr2avUc7rA?si=DMD27gdgIpWGxdkZ

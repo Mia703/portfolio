@@ -1,17 +1,24 @@
 ---
-tab_title: "Notepad App"
-description: ""
-pubDate: 2024-12-30
-author: "Amya Moore"
-image:
+layout: ../../layouts/ProjectLayout.astro
+title: 'Notepad App'
+languages: ''
+date: 'Month 2024'
+summary: ''
+header_image:
     url: ''
     alt: ''
+links:
+    live_url: ''
+    github_url: 'https://github.com/Mia703/notepad-app-website'
 ---
 
-# Notepad App
+### What I've Learned
+
+[content here]
+
+<br />
 
 ## Project Overview
 
 https://github.com/Mia703/xata-notepad-app
 
-https://github.com/Mia703/notepad-app-website

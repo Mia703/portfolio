@@ -109,3 +109,10 @@ By following these steps, you've successfully integrated Google Fonts with Tailw
 <https://tailwindcss.com/docs/hover-focus-and-other-states#styling-based-on-parent-state>
 
 Using the `group` and `group-hover` modifiers.
+
+## Creating a Photo Album in Astro
+
+Using `content collections` in Astro.
+
+https://docs.astro.build/en/guides/content-collections/
+

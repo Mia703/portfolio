@@ -1,17 +1,23 @@
 ---
-tab_title: "SimplyTasks"
-description: ""
-pubDate: 2024-12-30
-author: "Amya Moore"
-image:
+layout: ../../layouts/ProjectLayout.astro
+title: 'Simply Tasks'
+languages: ''
+date: 'Month 2024'
+summary: ''
+header_image:
     url: ''
     alt: ''
+links:
+    live_url: ''
+    github_url: 'https://github.com/Mia703/calendar-project'
 ---
 
-# SimplyTasks
+### What I've Learned
+
+[content here]
+
+<br />
 
 ## Project Overview
 
 Everyone wants to look their best...
-
-https://github.com/Mia703/calendar-project

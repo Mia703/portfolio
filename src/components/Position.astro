@@ -6,31 +6,31 @@ const { position, company, location, date, description } = Astro.props;
 	<div class="grid grid-cols-2 md:gap-4">
 		<div class="col-span-2 md:col-span-1">
 			<p
-				class="font-semibold text-primaryDarkGrey transition-all ease-in-out group-hover:text-primaryWhite"
+				class="font-semibold text-primaryWhite transition-all ease-in-out group-hover:text-primaryWhite md:text-primaryDarkGrey"
 			>
 				{position}
 			</p>
 			<p
-				class="mr-4 font-semibold italic text-primaryDarkGrey transition-all ease-in-out group-hover:text-primaryWhite"
+				class="mr-4 font-semibold italic text-primaryWhite transition-all ease-in-out group-hover:text-primaryWhite md:text-primaryDarkGrey"
 			>
 				{company}
 			</p>
 		</div>
 		<div class="col-span-2 md:col-span-1 md:text-right">
 			<p
-				class="text-primaryDarkGrey transition-all ease-in-out group-hover:text-primaryWhite"
+				class="transition-all ease-in-out group-hover:text-primaryWhite sm:text-primaryWhite md:text-primaryDarkGrey"
 			>
 				{location}
 			</p>
 			<p
-				class="text-primaryDarkGrey transition-all ease-in-out group-hover:text-primaryWhite"
+				class="transition-all ease-in-out group-hover:text-primaryWhite text-primaryWhite md:text-primaryDarkGrey"
 			>
 				{date}
 			</p>
 		</div>
 	</div>
 	<p
-		class="my-2 text-primaryDarkGrey transition-all ease-in-out group-hover:text-primaryLightGrey"
+		class="my-2 text-primaryLightGrey transition-all ease-in-out group-hover:text-primaryLightGrey md:text-primaryDarkGrey"
 	>
 		{description}
 	</p>

@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/ProjectLayout.astro
-title: 'Receipt Reader'
+title: 'Subsational Subs'
 languages: ''
 date: 'Month 2024'
 summary: ''

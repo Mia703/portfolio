@@ -3,35 +3,30 @@ import Navigation from "../components/Navigation.astro";
 import Layout from "../layouts/Layout.astro";
 import { CldImage } from "astro-cloudinary";
 import { getCollection } from "astro:content";
-const cloudinaryAssets = await getCollection("cloudinaryAssets");
-const cloudinaryAssetsTest = await getCollection("cloudinaryTestPhotos");
-console.log("assets: ", cloudinaryAssets);
+
+const cloudinary_denverZoo = await getCollection("cloudinary_denverZoo");
 ---
 
 <Layout>
 	<Navigation current="photography" />
 	<section class="photography-wrapper col-span-4 md:col-span-6 lg:col-span-12">
-		<h2>My Photographs</h2>
-		<div class="photographs-wrapper grid grid-cols-4 gap-4">
+		<div class="quote-wrapper p-4 italic">
+			<p>
+				"Photography is an art of observation. It's about finding something
+				interesting in an ordinary place... I've found it has little to do with
+				the things you see and everything to do with the way you see them." -
+				Elliott Erwitt
+			</p>
+		</div>
+		<div
+			class="photographs-wrapper grid grid-cols-2 gap-4 p-4 md:grid-cols-3 lg:grid-cols-4"
+		>
 			{
-				cloudinaryAssets.map(({ data: asset }) => (
-					<CldImage
-						src={asset.public_id}
-						width={600}
-						height={900}
-						crop={"auto"}
-						alt={asset.context?.custom.alt}
-						sizes={"25vw"}
-					/>
-				))
-			}
-
-			{
-				cloudinaryAssetsTest.map((asset) => (
+				cloudinary_denverZoo.map((asset) => (
 					<CldImage
 						src={asset.data.public_id}
-						width={600}
-						height={900}
+						width={asset.data.width}
+						height={asset.data.height}
 						crop={"auto"}
 						sizes={"25vw"}
 						alt={asset.data.context?.custom.alt}

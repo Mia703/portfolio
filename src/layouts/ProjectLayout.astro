@@ -38,7 +38,7 @@ const { frontmatter } = Astro.props;
 		<h2 class="mb-4">{frontmatter.title}</h2>
 		<h3 class="mb-2">Project Summary</h3>
 
-		<div class="details-wrapper mb-4 grid grid-cols-[1fr_0.5fr] gap-4">
+		<div class="details-wrapper mb-8 grid grid-cols-[1fr_0.5fr] gap-4">
 			<div class="left-wrapper">
 				<p>{frontmatter.summary}</p>
 			</div>
@@ -48,7 +48,7 @@ const { frontmatter } = Astro.props;
 					{frontmatter.languages}
 				</p>
 				<p>
-					<span class="font-semibold">Date Completed:</span>
+					<span class="font-semibold">Date:</span>
 					{frontmatter.date}
 				</p>
 
@@ -70,7 +70,7 @@ const { frontmatter } = Astro.props;
 					{
 						frontmatter.links.github_url != "" ? (
 							<a
-								href={frontmatter.links.live_url}
+								href={frontmatter.links.github_url}
 								class="flex flex-row items-center font-semibold"
 								target="_blank"
 							>
@@ -86,6 +86,13 @@ const { frontmatter } = Astro.props;
 		</div>
 
 		<!-- MD content placed below -->
-		<slot />
+		<div class="markdown-wrapper mb-8">
+			<slot />
+		</div>
+
+		<div class="project-images-wrapper">
+			<h3>Project Images</h3>
+			<!-- TODO: insert cloudinary link to project pictures -->
+		</div>
 	</main>
 </Layout>

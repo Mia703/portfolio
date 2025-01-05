@@ -4,9 +4,7 @@ title: "SimplyTasks"
 languages: "HTML, CSS, jQuery, jQuery UI"
 date: "May 2024"
 summary: "SimplyTasks is a web application that consolidates task management into a clean and straightforward monthly calendar view with an integrated to-do list. Designed for users who value simplicity and functionality, the app offers a place to organise tasks without distractions. Developed entirely with HTML, CSS, and jQuery, this project served as the final assignment for the course ICT 4505: Web Design and Management I in Spring 2024."
-header_image:
-  url: "../../assets/project-header-images/simplyTasks.png"
-  alt: "Simply tasks main calendar page"
+cloudinary_slug: 'cloudinary_simplyTasks'
 links:
   live_url: "https://simply-tasks.vercel.app/"
   github_url: "https://github.com/Mia703/calendar-project"

@@ -4,12 +4,11 @@ title: "Notepad App"
 languages: "Next.js, React, Material UI, TailwindCSS"
 date: "Oct 2024"
 summary: "The Notepad App is a minimalistic, efficient note-taking tool designed to quickly organise and manage notes. Developed as part of the ICT 4515: Usability Design course, this app allows users to create, tag, and sort notes by time or date. While the app itself is still in progress, the website marketing the application is built with Next.js and React for the frontend and backend, and Material UI and TailwindCSS for styling. The site follows the full usability testing design process, creating a website that is human-centric."
-header_image:
-  url: "../../assets/project-header-images/notepad.png"
-  alt: "Notepad desktop website"
+cloudinary_slug: 'cloudinary_notepad'
 links:
   live_url: "https://thenotepadapp.vercel.app/"
   github_url: "https://github.com/Mia703/notepad-app-website"
+
 ---
 <!-- TODO: how do I get the header image to display? -->
 ### What I've Learned

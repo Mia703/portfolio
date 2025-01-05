@@ -4,9 +4,7 @@ title: 'Phourtnight'
 languages: 'HTML, CSS, JQuery, AJAX, Django'
 date: 'Oc 2022'
 summary: ''
-header_image:
-    url: '../../assets/project-header-images/phourtnight.png'
-    alt: 'Phourtnight desktop screenshot'
+cloudinary_slug: ''
 links:
     live_url: 'https://youtu.be/EuGNqnLFR6w?si=CWgDF1oSZOpLxiS7'
     github_url: 'https://github.com/LenixC/Anemone'

@@ -4,9 +4,6 @@ title: "Subsational Subs"
 languages: "HTML, CSS, JavaScript, Leaflet.js"
 date: "Jul 2024"
 summary: "Subsational Subs is a class portfolio project that simulates the restaurant ordering process. Customers can browse the menu, select items, and submit orders through GET and POST requests sent to an API. The project also includes a Leaflet.js map for the location and contact details."
-header_image:
-  url: "../../assets/project-header-images/simplyTasks.png"
-  alt: "Subsational subs desktop screenshot"
 links:
   live_url: "https://subsational-subs.vercel.app/"
   github_url: "https://github.com/Mia703/subsational-subs"

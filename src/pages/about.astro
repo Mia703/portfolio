@@ -5,7 +5,9 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
 	<Navigation current="about" />
-	<div class="about-wrapper col-span-4 md:col-span-6 lg:col-span-12">
+	<main
+		class="about-wrapper col-span-4 md:col-span-6 lg:col-span-6 lg:col-start-4"
+	>
 		<h2 class="title mb-4">About Me</h2>
 		<p class="mb-4">
 			I’m a Maryland-based web developer driven by a passion for creativity and
@@ -45,5 +47,5 @@ import Layout from "../layouts/Layout.astro";
 			every line of code and every pixel place, I aim to leave a lasting impact,
 			making digital experiences as memorable as the journeys that inspire them.
 		</p>
-	</div>
+	</main>
 </Layout>

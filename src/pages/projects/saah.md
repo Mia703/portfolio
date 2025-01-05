@@ -4,9 +4,7 @@ title: 'Digital Marketing Signs'
 languages: 'Figma and Canva'
 date: 'Dec 2024'
 summary: 'Digital signs created for marketing purposes of the School of Art & Art History.'
-header_image:
-    url: ''
-    alt: 'Astro default image'
+cloudinary_slug: ''
 links:
     live_url: ''
     github_url: ''

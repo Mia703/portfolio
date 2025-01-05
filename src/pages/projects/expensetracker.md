@@ -4,9 +4,7 @@ title: "Expense Tracker"
 languages: "NextJS, React, TailwindCSS, Material UI, Xata.io"
 date: "In Progress"
 summary: "The expense tracker application, called Expense Tracker, is a web application designed to simplify personal finance management by implementing the 50/30/20 budgeting rule. It divides bi-weekly pay checks into Savings Contributions and Debit Repayment for 50%, Fixed Expenses for 30%, and all other wants or transaction for 20%. The application enables users to track recurring expenses, financial goals, and individual transactions. Built with Next.js and React for the backend and frontend, it utilises Material UI for components, TailwindCSS for styling and responsive design, and Xata.io for database management."
-header_image:
-  url: ""
-  alt: ""
+cloudinary_slug: 'cloudinary_expenseTracker'
 links:
   live_url: ""
   github_url: "https://github.com/Mia703/expense-tracker"

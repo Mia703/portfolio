@@ -1,17 +1,31 @@
 ---
 layout: ../../layouts/ProjectLayout.astro
-title: 'PanelSync'
-languages: 'NextJS, ReactJS, Firebase, Formik, Yup, Supabase'
-date: 'Mar 2024'
-summary: 'A full-stack book tracking web application designed to help users monitor their reading progress.'
+title: "PanelSync"
+languages: "NextJS, React, Firebase, Formik, Yup, Supabase"
+date: "Mar 2024"
+summary: "PanelSync is a centralised platform created for book enthusiasts to track their reading progress and organise their reading lists. The web application enables users to authenticate their accounts, search for and filter books, and save or delete books they are currently reading. PanelSync utilises Next.js and React, Firebase for user authentication, and Supabase for database management. This project was created collaboratively with a classmate as a final assignment for the course ICT 4300: Web Systems and Information. Book data was sourced from Open Library. At the completion of this course on March 16th, 2024, the Supabase database was frozen and all data was erased."
 header_image:
-    url: ''
-    alt: ''
+  url: ""
+  alt: ""
 links:
-    live_url: 'https://panelsync.vercel.app/'
-    github_url: 'https://github.com/Mia703/bookstore-application'
+  live_url: "https://panelsync.vercel.app/"
+  github_url: "https://github.com/Mia703/PanelSync"
 ---
 
 ### What I've Learned
 
-Created for the Master's course ICT 4300: Web Systems and Information, the following project was created to help readers track their reading progress. Authentication, search, and filtering of books was provided.
+PanelSync was an interesting project where I built a book-tracking application to help users keep track of their reading progress. Through this project, I gained experience working with full-stack development, specifically integrating user authentication and managing data across multiple platforms. I also learned how to fetch and display data from multiple platforms, including the Supabase database. Two of the most valuable takeaways from this project were learning how to integrate various technologies into a seamless experience and mastering the process of cleaning data. I utilised Open Library's bulk data dumps to pre-load book information into the application. This proved to be an interesting challenge, as I had to navigate through the data file, clean it, and import it into the Supabase database for display in the app. If I were to recreate this project, I would consider using Open Library's web API instead.
+
+<br>
+
+### Important Links
+
+The following are links to articles and videos that helped me build this project:
+
+<br>
+
+Open Library's Developer Center = [Link](https://openlibrary.org/developers)
+
+How to use Open Library's Web API = [Link](https://youtu.be/reN_okp2Gq4?si=UGl-gtByqZAj6AbO)
+
+An example of a Book Search application using Open Library and React = [Link](https://youtu.be/7xL9c39DhjI?si=ai6G8eFFQI9q2Blb)

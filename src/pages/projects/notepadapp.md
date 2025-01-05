@@ -11,7 +11,7 @@ links:
   live_url: "https://thenotepadapp.vercel.app/"
   github_url: "https://github.com/Mia703/notepad-app-website"
 ---
-
+<!-- TODO: how do I get the header image to display? -->
 ### What I've Learned
 
 The Notepad App website was a project I developed as part of my Usability Testing course. The website is simple and accessible, allowing users to learn about the application quickly and easily. Working on this website taught me a lot about user-centred design, especially focusing on accessibility. This was my first time conducting usability tests and heuristic evaluations, which was a completely new and insightful experience. Overall this project taught me how crucial it is to test and iterate based on user feedback.

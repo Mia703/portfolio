@@ -110,13 +110,23 @@ const { current } = Astro.props;
 				}
 			</li>
 			<li class="nav-item">
-				<a
-					href="mailto:amya.nicole.moore@gmail.com?subject=Let's Connect!"
-					class="flex flex-row justify-end"
-				>
-					Contact Me
-					<img src="/arrow.svg" alt="arrow" class="ml-1" />
-				</a>
+				{
+					current == "contact" ? (
+						<a
+							href="/contact"
+							class="nav-link mx-1 border-b-2 border-primaryDarkGrey pb-2 transition-all ease-in hover:border-primaryYellow md:mx-3"
+						>
+							Contact Me
+						</a>
+					) : (
+						<a
+							href="/contact"
+							class="nav-link mx-1 border-b-2 border-transparent pb-2 transition-all ease-in hover:border-primaryYellow md:mx-3"
+						>
+							Contact Me
+						</a>
+					)
+				}
 			</li>
 		</ul>
 	</nav>

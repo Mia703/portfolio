@@ -1,15 +1,13 @@
 ---
 layout: ../../layouts/ProjectLayout.astro
-title: 'Flavour Town Subs'
-languages: 'Flutter, Dart'
-date: 'Jul 2024'
-summary: 'Flavour Town Subs is a cross-platform mobile application designed to simulate the restaurant ordering process. This project marked my first experience with Flutter and Dart.'
-header_image:
-    url: ''
-    alt: ''
+title: "Flavour Town Subs"
+languages: "Flutter, Dart"
+date: "Jul 2024"
+summary: "Flavour Town Subs is a cross-platform mobile application designed to simulate the restaurant ordering process. This project marked my first experience with Flutter and Dart."
+cloudinary_slug: ''
 links:
-    live_url: ''
-    github_url: 'https://github.com/Mia703/flavour-town-subs-flutter-application'
+  live_url: ""
+  github_url: "https://github.com/Mia703/flavour-town-subs-flutter-application"
 ---
 
 ### What I've Learned

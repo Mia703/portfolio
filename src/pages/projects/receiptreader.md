@@ -4,9 +4,7 @@ title: 'Receipt Reader'
 languages: ''
 date: 'Month 2024'
 summary: ''
-header_image:
-    url: ''
-    alt: ''
+cloudinary_slug: ''
 links:
     live_url: ''
     github_url: ''

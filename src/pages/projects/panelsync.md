@@ -4,9 +4,7 @@ title: "PanelSync"
 languages: "NextJS, React, Firebase, Formik, Yup, Supabase"
 date: "Mar 2024"
 summary: "PanelSync is a centralised platform created for book enthusiasts to track their reading progress and organise their reading lists. The web application enables users to authenticate their accounts, search for and filter books, and save or delete books they are currently reading. PanelSync utilises Next.js and React, Firebase for user authentication, and Supabase for database management. This project was created collaboratively with a classmate as a final assignment for the course ICT 4300: Web Systems and Information. Book data was sourced from Open Library. At the completion of this course on March 16th, 2024, the Supabase database was frozen and all data was erased."
-header_image:
-  url: ""
-  alt: ""
+cloudinary_slug: 'cloudinary_panelSync'
 links:
   live_url: "https://panelsync.vercel.app/"
   github_url: "https://github.com/Mia703/PanelSync"

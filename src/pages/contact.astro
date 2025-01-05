@@ -1,0 +1,69 @@
+---
+import Navigation from "../components/Navigation.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<Navigation current="contact" />
+	<section
+		id="contact"
+		class="col-span-4 flex h-[80vh] flex-col justify-center md:col-span-4 md:col-start-2 lg:col-span-6 lg:col-start-4"
+	>
+		<div class="contact-form-wrapper rounded-md p-4">
+			<h2 class="my-2 text-center text-primaryWhite">Contact Me</h2>
+
+			<form
+				action="https://formspree.io/f/mbllpabj"
+				method="POST"
+				id="contact-form"
+				class="flex flex-col justify-center"
+			>
+				<div class="input-wrapper my-2 flex flex-col justify-start">
+					<label for="fullName" class="mb-1">
+						Full Name
+						<span class="text-xs text-red-400">*</span>
+					</label>
+					<input
+						type="text"
+						name="fullName"
+						id="fullName"
+						class="rounded-md p-2 text-primaryBlack"
+						required
+					/>
+				</div>
+				<div class="input-wrapper my-2 flex flex-col justify-start">
+					<label for="email" class="mb-1">
+						Email
+						<span class="text-xs text-red-400">*</span>
+					</label>
+					<input
+						type="email"
+						name="email"
+						id="email"
+						class="rounded-md p-2 text-primaryBlack"
+						required
+					/>
+				</div>
+				<div class="input-wrapper my-2 flex flex-col justify-start">
+					<label for="message" class="mb-1">
+						Message
+						<span class="text-xs text-red-400">*</span>
+					</label>
+					<textarea
+						name="message"
+						id="message"
+						cols="30"
+						rows="5"
+						class="rounded-md p-2 text-primaryBlack"
+						required></textarea>
+				</div>
+				<button
+					type="submit"
+					class="my-4 rounded-md bg-primaryDarkGrey p-2 font-bold transition-all hover:bg-primaryYellow hover:text-primaryBlack"
+				>
+					Send
+				</button>
+			</form>
+		</div>
+	</section>
+</Layout>

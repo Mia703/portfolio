@@ -4,9 +4,7 @@ title: 'Test Project'
 languages: 'NextJS, ReactJS, ...'
 date: 'Month 2024'
 summary: 'Lorem ipsum odor amet, consectetuer adipiscing elit. Rutrum netus a praesent faucibus primis nostra arcu risus sollicitudin.'
-header_image:
-    url: 'https://docs.astro.build/assets/rose.webp'
-    alt: 'Astro default image'
+cloudinary_slug: ''
 links:
     live_url: 'https://www.google.com/'
     github_url: 'https://www.google.com/'

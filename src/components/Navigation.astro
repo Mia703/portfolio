@@ -6,7 +6,87 @@ const { current } = Astro.props;
 	id="navigation-wrapper"
 	class="col-span-4 mb-4 md:col-span-6 lg:col-span-12"
 >
-	<nav id="main-navigation" class="flex flex-row justify-between">
+	<div class="mobile-wrapper relative float-right h-7 w-7 lg:hidden">
+		<img
+			src="menu.svg"
+			alt="menu icon"
+			class="pointer-events-none absolute z-[2] h-full w-full"
+		/>
+		<input
+			type="checkbox"
+			name="toggle"
+			id="toggle"
+			class="peer h-full w-full cursor-pointer appearance-none"
+		/>
+		<label
+			for="toggle"
+			class="invisible peer-checked:pointer-events-auto peer-checked:visible"
+		>
+			<div
+				class="mobile-background fixed right-0 top-0 z-[3] h-dvh w-screen bg-primaryBlack/50"
+			>
+				<div class="mobile-nav-wrapper grid grid-cols-4">
+					<nav
+						id="mobile-navigation"
+						class="col-span-2 col-start-3 h-dvh bg-primaryDarkGrey p-4"
+					>
+						<ul class="nav-list flex flex-col items-end">
+							<li class="nav-item my-2">
+								<a href="/" class="text-3xl font-semibold text-primaryBlack">
+									Home
+								</a>
+							</li>
+							<li class="nav-item my-2">
+								<a
+									href="/about"
+									class="text-3xl font-semibold text-primaryBlack"
+								>
+									About
+								</a>
+							</li>
+							<li class="nav-item my-2">
+								<a
+									href="/projects"
+									class="text-3xl font-semibold text-primaryBlack"
+								>
+									Projects
+								</a>
+							</li>
+							<li class="nav-item my-2">
+								<a
+									href="/experience"
+									class="text-3xl font-semibold text-primaryBlack"
+								>
+									Experience
+								</a>
+							</li>
+							<li class="nav-item my-2">
+								<a
+									href="/photography"
+									class="text-3xl font-semibold text-primaryBlack"
+								>
+									Photography
+								</a>
+							</li>
+							<li class="nav-item my-2">
+								<a
+									href="/contact"
+									class="text-3xl font-semibold text-primaryBlack"
+								>
+									Contact Me
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</label>
+	</div>
+
+	<nav
+		id="desktop-navigation"
+		class="hidden lg:flex lg:flex-row lg:justify-between"
+	>
 		<a
 			href="/"
 			id="logo"

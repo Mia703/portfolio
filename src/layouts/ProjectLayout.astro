@@ -30,7 +30,7 @@ if (frontmatter.cloudinary_slug != "") {
 				Back to All Projects
 			</a>
 		</div>
-		
+
 		<main>
 			<h2 class="mb-4">{frontmatter.title}</h2>
 			<h3 class="mb-2">Project Summary</h3>
@@ -54,6 +54,7 @@ if (frontmatter.cloudinary_slug != "") {
 									href={frontmatter.links.live_url}
 									class="flex flex-row items-center font-semibold"
 									target="_blank"
+									rel="noopener noreferrer"
 								>
 									Live Site
 									<img src="/arrow.svg" alt="arrow icon" />
@@ -68,6 +69,7 @@ if (frontmatter.cloudinary_slug != "") {
 									href={frontmatter.links.github_url}
 									class="flex flex-row items-center font-semibold"
 									target="_blank"
+									rel="noopener noreferrer"
 								>
 									GitHub Repo
 									<img src="/arrow.svg" alt="arrow icon" />

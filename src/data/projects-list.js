@@ -48,12 +48,12 @@ const projects_list = [
     link: "/projects/notepadapp",
     year: 2024,
   },
-  {
-    name: "Receipt Reader",
-    description: "",
-    link: "/projects/receiptreader",
-    year: 2024,
-  },
+  // {
+  //   name: "Receipt Reader",
+  //   description: "",
+  //   link: "/projects/receiptreader",
+  //   year: 2024,
+  // },
   {
     name: 'Phourtnight',
     description: 'A web app that allows roommates to gameify tasks and notifications.',

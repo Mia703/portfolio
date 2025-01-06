@@ -14,98 +14,100 @@ if (frontmatter.cloudinary_slug != "") {
 <Layout url={frontmatter.url}>
 	<Navigation current="projects" />
 
-	<div class="back-wrapper col-span-4 md:col-span-6 lg:col-span-12">
-		<a
-			href="/projects"
-			class="flex w-fit flex-row items-center border-b-2 border-b-transparent pb-2 transition-colors ease-in hover:border-b-primaryYellow"
-		>
-			<img src="/arrow-left.svg" alt="arrow left icon" class="mr-2 w-[1rem]" />
-			Back to All Projects
-		</a>
-	</div>
-
-	<main
+	<section
 		class="col-span-4 p-4 md:col-span-6 lg:col-span-10 lg:col-start-2 lg:p-8"
 	>
-		<h2 class="mb-4">{frontmatter.title}</h2>
-		<h3 class="mb-2">Project Summary</h3>
-
-		<div class="details-wrapper mb-8 grid grid-cols-[1fr_0.5fr] gap-4">
-			<div class="left-wrapper">
-				<p>{frontmatter.summary}</p>
-			</div>
-			<div class="right-wrapper">
-				<p>
-					<span class="font-semibold">Languages:</span>
-					{frontmatter.languages}
-				</p>
-				<p>
-					<span class="font-semibold">Date:</span>
-					{frontmatter.date}
-				</p>
-
-				<div class="links-wrapper my-2 text-right">
-					{
-						frontmatter.links.live_url != "" ? (
-							<a
-								href={frontmatter.links.live_url}
-								class="flex flex-row items-center font-semibold"
-								target="_blank"
-							>
-								Live Site
-								<img src="/arrow.svg" alt="arrow icon" />
-							</a>
-						) : (
-							<a href="" />
-						)
-					}
-					{
-						frontmatter.links.github_url != "" ? (
-							<a
-								href={frontmatter.links.github_url}
-								class="flex flex-row items-center font-semibold"
-								target="_blank"
-							>
-								GitHub Repo
-								<img src="/arrow.svg" alt="arrow icon" />
-							</a>
-						) : (
-							<a href="" />
-						)
-					}
+		<div class="back-wrapper mb-8">
+			<a
+				href="/projects"
+				class="flex w-fit flex-row items-center border-b-2 border-b-transparent pb-2 transition-colors ease-in hover:border-b-primaryYellow"
+			>
+				<img
+					src="/arrow-left.svg"
+					alt="arrow left icon"
+					class="mr-2 w-[1rem]"
+				/>
+				Back to All Projects
+			</a>
+		</div>
+		
+		<main>
+			<h2 class="mb-4">{frontmatter.title}</h2>
+			<h3 class="mb-2">Project Summary</h3>
+			<div class="details-wrapper mb-8 grid grid-cols-[1fr_0.5fr] gap-4">
+				<div class="left-wrapper">
+					<p>{frontmatter.summary}</p>
 				</div>
-			</div>
-		</div>
-
-		<!-- MD content placed below -->
-		<div class="markdown-wrapper mb-8">
-			<slot />
-		</div>
-
-		{
-			cloudinary ? (
-				<div class="project-image-wrapper">
-					<h3 class="mb-2">Project Images</h3>
-					<div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-4">
-						{cloudinary ? (
-							cloudinary.map((asset: any) => (
-								<CldImage
-									src={asset.data.public_id}
-									width={600}
-									height={600}
-									crop={"auto"}
-									sizes={"25vw"}
-									alt={asset.data.context?.custom.alt}
-								/>
-							))
-						) : (
-							<div />
-						)}
+				<div class="right-wrapper">
+					<p>
+						<span class="font-semibold">Languages:</span>
+						{frontmatter.languages}
+					</p>
+					<p>
+						<span class="font-semibold">Date:</span>
+						{frontmatter.date}
+					</p>
+					<div class="links-wrapper my-2 text-right">
+						{
+							frontmatter.links.live_url != "" ? (
+								<a
+									href={frontmatter.links.live_url}
+									class="flex flex-row items-center font-semibold"
+									target="_blank"
+								>
+									Live Site
+									<img src="/arrow.svg" alt="arrow icon" />
+								</a>
+							) : (
+								<a href="" />
+							)
+						}
+						{
+							frontmatter.links.github_url != "" ? (
+								<a
+									href={frontmatter.links.github_url}
+									class="flex flex-row items-center font-semibold"
+									target="_blank"
+								>
+									GitHub Repo
+									<img src="/arrow.svg" alt="arrow icon" />
+								</a>
+							) : (
+								<a href="" />
+							)
+						}
 					</div>
 				</div>
-			) : (
-				<div />
-			)
-		}
-	</main>
+			</div>
+			<!-- MD content placed below -->
+			<div class="markdown-wrapper mb-8">
+				<slot />
+			</div>
+			{
+				cloudinary ? (
+					<div class="project-image-wrapper">
+						<h3 class="mb-2">Project Images</h3>
+						<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+							{cloudinary ? (
+								cloudinary.map((asset: any) => (
+									<CldImage
+										src={asset.data.public_id}
+										width={600}
+										height={600}
+										crop={"auto"}
+										sizes={"45vw"}
+										alt={asset.data.context?.custom.alt}
+									/>
+								))
+							) : (
+								<div />
+							)}
+						</div>
+					</div>
+				) : (
+					<div />
+				)
+			}
+		</main>
+	</section>
 </Layout>

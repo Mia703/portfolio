@@ -20,16 +20,16 @@ const cloudinary_photography = await getCollection("cloudinary_photography");
 			</p>
 		</div>
 		<div
-			class="photographs-wrapper grid grid-cols-2 gap-4 p-4 md:grid-cols-3 lg:grid-cols-4"
+			class="photographs-wrapper grid grid-cols-1 gap-4 p-4 md:grid-cols-2 lg:grid-cols-3"
 		>
 			{
-				cloudinary_photography.map((asset) => (
+				cloudinary_photography.map((asset: any) => (
 					<CldImage
 						src={asset.data.public_id}
 						width={asset.data.width}
 						height={asset.data.height}
 						crop={"auto"}
-						sizes={"25vw"}
+						sizes={"45vw"}
 						alt={asset.data.context?.custom.alt}
 						class={"cloudinary-image"}
 					/>

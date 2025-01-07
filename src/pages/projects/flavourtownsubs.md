@@ -3,7 +3,7 @@ layout: ../../layouts/ProjectLayout.astro
 title: "Flavour Town Subs"
 languages: "Flutter, Dart"
 date: "Jul 2024"
-summary: "Flavour Town Subs is a cross-platform mobile application designed to simulate the restaurant ordering process. This project marked my first experience with Flutter and Dart."
+summary: "Flavour Town Subs is a cross-platform mobile application designed to simulate the restaurant ordering process."
 cloudinary_slug: ''
 links:
   live_url: ""

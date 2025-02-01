@@ -7,39 +7,10 @@ const projects_list = [
     year: 2024,
   },
   {
-    name: "PanelSync",
-    description: "A full-stack book tracking web app that let's users save, delete, and organise books and monitor reading progress",
-    link: "/projects/panelsync",
-    year: 2024,
-  },
-  {
     name: "SAAH Digital Marketing Signs",
-    description: "Digital signs for the School of Art & Art History",
+    description:
+      "Digital and print marketing materials for the School of Art & Art History",
     link: "/projects/saah",
-    year: 2024,
-  },
-  {
-    name: "Becca: A Fashion Chatbot",
-    description: "A Python-based fashion chatbot",
-    link: "/projects/becca",
-    year: 2023,
-  },
-  {
-    name: "SimplyTasks",
-    description: "A simple, no-frills monthly calendar with an integrated to-do list for easy task management",
-    link: "/projects/simplytasks",
-    year: 2024,
-  },
-  {
-    name: "Flavour Town Subs",
-    description: "A cross-platform mobile app that simulates ordering",
-    link: "/projects/flavourtownsubs",
-    year: 2024,
-  },
-  {
-    name: "Substational Subs",
-    description: "A JavaScript-based app that simulates ordering food from a restaurant",
-    link: "/projects/subsationalsubs",
     year: 2024,
   },
   {
@@ -48,6 +19,35 @@ const projects_list = [
     link: "/projects/notepadapp",
     year: 2024,
   },
+  {
+    name: "PanelSync",
+    description:
+      "A full-stack book tracking web app that let's users save, delete, and organise books and monitor reading progress",
+    link: "/projects/panelsync",
+    year: 2024,
+  },
+  {
+    name: "SimplyTasks",
+    description:
+      "A simple, no-frills monthly calendar with an integrated to-do list for easy task management",
+    link: "/projects/simplytasks",
+    year: 2024,
+  },
+  {
+    name: "Flavour Town Subs",
+    description:
+      "A Dart-based cross-platform mobile app that simulates ordering",
+    link: "/projects/flavourtownsubs",
+    year: 2024,
+  },
+  {
+    name: "Substational Subs",
+    description:
+      "A JavaScript-based app that simulates ordering food from a restaurant",
+    link: "/projects/subsationalsubs",
+    year: 2024,
+  },
+
   // {
   //   name: "Receipt Reader",
   //   description: "",
@@ -55,11 +55,18 @@ const projects_list = [
   //   year: 2024,
   // },
   {
-    name: 'Phourtnight',
-    description: 'A web app that allows roommates to gameify tasks and notifications.',
-    link: '/projects/phourtnight',
+    name: "Phourtnight",
+    description:
+      "A web app that allows roommates to gameify tasks and notifications.",
+    link: "/projects/phourtnight",
     year: 2023,
-  }
+  },
+  {
+    name: "Becca: A Fashion Chatbot",
+    description: "A Python-based fashion chatbot",
+    link: "/projects/becca",
+    year: 2023,
+  },
 ];
 
 // reverse the list

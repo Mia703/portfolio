@@ -1,0 +1,129 @@
+---
+import { CldImage } from "astro-cloudinary";
+import { getCollection } from "astro:content";
+
+const { collection_name } = Astro.props;
+let cloudinary = await getCollection(collection_name);
+---
+
+<div
+	id="gallery"
+	class="gallery-wrapper grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
+>
+	{
+		cloudinary ? (
+			cloudinary
+				.sort((a: any, b: any) =>
+					a.data.display_name.localeCompare(b.data.display_name)
+				)
+				.map((asset: any) => (
+					<CldImage
+						src={asset.data.public_id}
+						alt={asset.data.context?.custom.alt}
+						class="lightbox-trigger cursor-pointer"
+						quality={"auto:low"}
+						crop={"auto"}
+						sizes={"45vw"}
+					/>
+				))
+		) : (
+			<div />
+		)
+	}
+</div>
+
+<div
+	id="lightbox"
+	class="lightbox-background fixed left-0 top-0 z-10 hidden h-dvh w-full flex-col items-center justify-center bg-gray-900/75 p-4"
+>
+	<div class="lightbox-wrapper flex flex-col items-center justify-center">
+		<div class="lightbox-image-wrapper w-full md:w-[85vw] lg:w-[65vw]">
+			<CldImage
+				src=""
+				alt=""
+				id={"lightbox-image"}
+				quality={"auto:basic"}
+				crop={"auto"}
+			/>
+		</div>
+
+		<div class="lightbox-button-wrapper">
+			<button type="button" id="prev-btn" class="mx-4 my-2">
+				<span class="text-2xl md:text-3xl lg:text-4xl">&#8592;</span>
+			</button>
+			<button type="button" id="next-btn" class="mx-4 my-2">
+				<span class="text-2xl md:text-3xl lg:text-4xl">&#8594;</span>
+			</button>
+		</div>
+	</div>
+</div>
+
+<script>
+	import { imageConfig } from "astro:assets";
+
+	const image_trigger = document.querySelectorAll(".lightbox-trigger");
+	const lightbox = document.getElementById("lightbox");
+	const lightbox_image = document.getElementById("lightbox-image");
+	const previous_button = document.getElementById("prev-btn");
+	const next_button = document.getElementById("next-btn");
+	let curr_index: number | null = null;
+
+	image_trigger.forEach((trigger, index) => {
+		trigger.addEventListener("click", () => {
+			curr_index = index;
+
+			const src = trigger.getAttribute("src");
+			const alt = trigger.getAttribute("alt");
+			if (src) {
+				lightbox_image?.setAttribute("src", src);
+
+				if (alt) {
+					lightbox_image?.setAttribute("alt", alt);
+				}
+			}
+			lightbox?.classList.replace("hidden", "flex");
+		});
+	});
+
+	lightbox?.addEventListener("click", (event) => {
+		if (event.target === lightbox) {
+			lightbox.classList.replace("flex", "hidden");
+		}
+	});
+
+	next_button?.addEventListener("click", () => {
+		if (curr_index != null && curr_index < image_trigger.length - 1) {
+			const new_image = image_trigger[curr_index + 1];
+
+			const src = new_image.getAttribute("src");
+			const alt = new_image.getAttribute("alt");
+
+			if (src) {
+				lightbox_image?.setAttribute("src", src);
+
+				if (alt) {
+					lightbox_image?.setAttribute("alt", alt);
+				}
+			}
+			curr_index += 1;
+		}
+	});
+
+	previous_button?.addEventListener("click", () => {
+		if (curr_index != null && curr_index > 0) {
+			const new_image = image_trigger[curr_index - 1];
+
+			const src = new_image.getAttribute("src");
+			const alt = new_image.getAttribute("alt");
+
+			if (src) {
+				lightbox_image?.setAttribute("src", src);
+
+				if (alt) {
+					lightbox_image?.setAttribute("alt", alt);
+				}
+			}
+			curr_index -= 1;
+		}
+	});
+</script>

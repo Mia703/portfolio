@@ -1,14 +1,11 @@
 ---
+import Gallery from "../components/Gallery.astro";
 import Navigation from "../components/Navigation.astro";
 import Layout from "./Layout.astro";
 import { CldImage } from "astro-cloudinary";
 import { getCollection } from "astro:content";
-const { frontmatter } = Astro.props;
 
-let cloudinary = null;
-if (frontmatter.cloudinary_slug != "") {
-	cloudinary = await getCollection(frontmatter.cloudinary_slug);
-}
+const { frontmatter } = Astro.props;
 ---
 
 <Layout url={frontmatter.url}>
@@ -86,24 +83,11 @@ if (frontmatter.cloudinary_slug != "") {
 				<slot />
 			</div>
 			{
-				cloudinary ? (
+				frontmatter.cloudinary_slug != "" ? (
 					<div class="project-image-wrapper">
 						<h3 class="mb-2">Project Images</h3>
 						<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-							{cloudinary ? (
-								cloudinary.map((asset: any) => (
-									<CldImage
-										src={asset.data.public_id}
-										width={600}
-										height={600}
-										crop={"auto"}
-										sizes={"45vw"}
-										alt={asset.data.context?.custom.alt}
-									/>
-								))
-							) : (
-								<div />
-							)}
+							<Gallery collection_name={frontmatter.cloudinary_slug} />
 						</div>
 					</div>
 				) : (

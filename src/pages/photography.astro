@@ -1,10 +1,9 @@
 ---
+import Gallery from "../components/Gallery.astro";
 import Navigation from "../components/Navigation.astro";
 import Layout from "../layouts/Layout.astro";
 import { CldImage } from "astro-cloudinary";
 import { getCollection } from "astro:content";
-
-const cloudinary_photography = await getCollection("cloudinary_photography");
 ---
 
 <Layout>
@@ -19,22 +18,6 @@ const cloudinary_photography = await getCollection("cloudinary_photography");
 				Elliott Erwitt
 			</p>
 		</div>
-		<div
-			class="photographs-wrapper grid grid-cols-1 gap-4 p-4 md:grid-cols-2 lg:grid-cols-3"
-		>
-			{
-				cloudinary_photography.map((asset: any) => (
-					<CldImage
-						src={asset.data.public_id}
-						width={asset.data.width}
-						height={asset.data.height}
-						crop={"auto"}
-						sizes={"45vw"}
-						alt={asset.data.context?.custom.alt}
-						class={"cloudinary-image"}
-					/>
-				))
-			}
-		</div>
+		<Gallery collection_name={"cloudinary_photography"} />
 	</section>
 </Layout>

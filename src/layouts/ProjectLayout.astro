@@ -86,9 +86,7 @@ const { frontmatter } = Astro.props;
 				frontmatter.cloudinary_slug != "" ? (
 					<div class="project-image-wrapper">
 						<h3 class="mb-2">Project Images</h3>
-						<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-							<Gallery collection_name={frontmatter.cloudinary_slug} />
-						</div>
+						<Gallery collection_name={frontmatter.cloudinary_slug} />
 					</div>
 				) : (
 					<div />

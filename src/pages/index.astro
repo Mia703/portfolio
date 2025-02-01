@@ -3,6 +3,7 @@ import Navigation from "../components/Navigation.astro";
 import Project from "../components/Project.astro";
 import Layout from "../layouts/Layout.astro";
 import ProjectsList from "../data/projects-list.js";
+import Lightbox from "../components/lightbox/Lightbox.astro";
 
 const selected_projects = ProjectsList.slice(0, 3);
 ---
@@ -20,15 +21,16 @@ const selected_projects = ProjectsList.slice(0, 3);
 				Amya Moore <br /> junior front-end web developer
 			</h1>
 			<p class="lg:w-[55ch]">
-				Hello, I'm Amya <span class="italic">(ah-my-ya)</span>, a junior
-				web developer passionate about crafting engaging user experiences.
-				My academic journey has been dedicated to building the knowledge and
-				skills for this role, and I'm always eager to learn more. As a recent
-				master's graduate, I'm actively seeking <span class="font-semibold">
+				Hello, I'm Amya <span class="italic">(ah-my-ya)</span>, a junior web
+				developer passionate about crafting engaging user experiences. My
+				academic journey has been dedicated to building the knowledge and skills
+				for this role, and I'm always eager to learn more. As a recent master's
+				graduate, I'm actively seeking <span class="font-semibold">
 					full-time opportunities worldwide
 				</span>. Feel free to explore my portfolio and don't hesitate to reach
 				out - I'd love to connect and hear from you!
 			</p>
+
 		</div>
 
 		<div

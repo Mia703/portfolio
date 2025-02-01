@@ -31,7 +31,7 @@ export const collections = {
       context: true,
     }),
   }),
-  cloudinary_saaah: defineCollection({
+  cloudinary_saah: defineCollection({
     loader: cldAssetsLoader({
       folder: "portfolio-projects/saah",
       limit: 31,

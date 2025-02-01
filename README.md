@@ -115,3 +115,7 @@ Using the `group` and `group-hover` modifiers.
 Using `Cloudinary` and Astro
 
 https://youtu.be/Bfr2avUc7rA?si=DMD27gdgIpWGxdkZ
+
+Documentation - https://astro.cloudinary.dev/cldassetsloader/examples
+
+Optimising Images - https://cloudinary.com/documentation/image_optimization#automatic_quality_selection_q_auto

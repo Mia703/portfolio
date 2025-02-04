@@ -16,6 +16,12 @@ export const collections = {
       context: true,
     }),
   }),
+  cloudinary_fairviewGolfClub: defineCollection({
+    loader: cldAssetsLoader({
+      folder: "portfolio-projects/fairview-golf-club",
+      context: true,
+    }),
+  }),
   cloudinary_notepad: defineCollection({
     loader: cldAssetsLoader({
       folder: "portfolio-projects/notepad-website",

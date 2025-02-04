@@ -1,5 +1,12 @@
 const projects_list = [
   {
+    name: "Fairview Golf Club Website Redesign",
+    description:
+      "Modernized a client's website, enhancing functionality and user experience for the club and the community",
+    link: "/projects/fairviewgolfclub",
+    year: 2024,
+  },
+  {
     name: "Expense Tracker",
     description:
       "Helps users track their expenses using the 50/30/20 budgeting rule",
@@ -22,7 +29,7 @@ const projects_list = [
   {
     name: "PanelSync",
     description:
-      "A full-stack book tracking web app that let's users save, delete, and organise books and monitor reading progress",
+      "A full-stack book tracking web app that let's users save, delete, and organize books and monitor reading progress",
     link: "/projects/panelsync",
     year: 2024,
   },

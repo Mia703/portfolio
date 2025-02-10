@@ -117,3 +117,4 @@ Using `Cloudinary` and Astro
 https://youtu.be/Bfr2avUc7rA?si=DMD27gdgIpWGxdkZ
 
 
+Added Google Analytics

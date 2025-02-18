@@ -5,6 +5,7 @@ languages: "Python, Emora STDM, NLP, OpenAi API"
 date: "Mar 2023"
 summary: "Becaa was a Python-based AI clothing recommendation chatbot built as the final project for my Natural Language Processing course. Utilizing OpenAI API, Emora STDM, and Natural Language Processing (NLP), my three teammates and I developed a functional chatbot."
 cloudinary_slug: ""
+enable_gallery: false
 links:
   live_url: "https://www.canva.com/design/DAFgF4dkEtM/KAdjXQ1418dzx2l9Ipjo_A/edit"
   github_url: "https://github.com/Mia703/Becca-Fashion-Chatbot-Repo"

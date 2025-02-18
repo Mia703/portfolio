@@ -5,6 +5,7 @@ languages: "HTML, CSS, JavaScript, Leaflet.js"
 date: "Jul 2024"
 summary: "Similar to the Flavour Town Subs project, Subsational Subs is a class portfolio project that also simulates the restaurant ordering process. Customers can browse the menu, select items, and submit orders. Data is sent through GET and POST requests to a class-provided API. The project also includes a Leaflet.js map for the location and contact details."
 cloudinary_slug: "cloudinary_subsationalSubs"
+enable_gallery: true
 links:
   live_url: "https://subsational-subs.vercel.app/"
   github_url: "https://github.com/Mia703/subsational-subs"

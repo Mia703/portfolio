@@ -2,7 +2,7 @@
 import { CldImage } from "astro-cloudinary";
 import { getCollection } from "astro:content";
 
-const { collection_name } = Astro.props;
+const { collection_name, enable_gallery } = Astro.props;
 let cloudinary = await getCollection(collection_name);
 ---
 
@@ -20,7 +20,11 @@ let cloudinary = await getCollection(collection_name);
 					<CldImage
 						src={asset.data.public_id}
 						alt={asset.data.context?.custom.alt}
-						class="lightbox-trigger cursor-pointer"
+						class={
+							enable_gallery
+								? "lightbox-trigger cursor-pointer"
+								: "lightbox-trigger"
+						}
 						quality={"auto:low"}
 						crop={"auto"}
 						sizes={"45vw"}
@@ -32,35 +36,39 @@ let cloudinary = await getCollection(collection_name);
 	}
 </div>
 
-<div
-	id="lightbox"
-	class="lightbox-background fixed left-0 top-0 z-10 hidden h-dvh w-full flex-col items-center justify-center bg-gray-900/75 p-4"
->
-	<div class="lightbox-wrapper flex flex-col items-center justify-center">
-		<div class="lightbox-image-wrapper w-full md:w-[85vw] lg:w-[65vw]">
-			<CldImage
-				src=""
-				alt=""
-				id={"lightbox-image"}
-				quality={"auto:basic"}
-				crop={"auto"}
-			/>
-		</div>
+{
+	enable_gallery ? (
+		<div
+			id="lightbox"
+			class="lightbox-background fixed left-0 top-0 z-10 hidden h-dvh w-full flex-col items-center justify-center bg-gray-900/75 p-4"
+		>
+			<div class="lightbox-wrapper flex flex-col items-center justify-center">
+				<div class="lightbox-image-wrapper w-full md:w-[85vw] lg:w-[65vw]">
+					<CldImage
+						src=""
+						alt=""
+						id={"lightbox-image"}
+						quality={"auto:basic"}
+						crop={"auto"}
+					/>
+				</div>
 
-		<div class="lightbox-button-wrapper">
-			<button type="button" id="prev-btn" class="mx-4 my-2">
-				<span class="text-2xl md:text-3xl lg:text-4xl">&#8592;</span>
-			</button>
-			<button type="button" id="next-btn" class="mx-4 my-2">
-				<span class="text-2xl md:text-3xl lg:text-4xl">&#8594;</span>
-			</button>
+				<div class="lightbox-button-wrapper">
+					<button type="button" id="prev-btn" class="mx-4 my-2">
+						<span class="text-2xl md:text-3xl lg:text-4xl">&#8592;</span>
+					</button>
+					<button type="button" id="next-btn" class="mx-4 my-2">
+						<span class="text-2xl md:text-3xl lg:text-4xl">&#8594;</span>
+					</button>
+				</div>
+			</div>
 		</div>
-	</div>
-</div>
+	) : (
+		<div />
+	)
+}
 
 <script>
-	import { imageConfig } from "astro:assets";
-
 	const image_trigger = document.querySelectorAll(".lightbox-trigger");
 	const lightbox = document.getElementById("lightbox");
 	const lightbox_image = document.getElementById("lightbox-image");

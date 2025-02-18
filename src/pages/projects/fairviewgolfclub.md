@@ -5,6 +5,7 @@ languages: "Elementor and WordPress"
 date: "Dec 2024"
 summary: "The Fairview Golf Club website redesign project aimed to modernize and optimize the online presence of my grandmother's organization, Fairview Golf Club, Inc. The goal was to create a user-friendly, visually appealing, and functional website that met the specific needs of the club and its members."
 cloudinary_slug: "cloudinary_fairviewGolfClub"
+enable_gallery: true
 links:
   live_url: "https://fairviewgolfclub.org/"
   github_url: ""

@@ -5,6 +5,7 @@ languages: "NextJS, React, TailwindCSS, Material UI, Xata.io"
 date: "In Progress"
 summary: "The expense tracker application, called Expense Tracker, was inspired by my need of a better budgeting tool. Utilizing the 50/30/20 budgeting rule, the application divides bi-weekly pay checks into Savings Contributions and Debit Repayment for 50%, Fixed Expenses for 30%, and all other wants or transaction for 20%. The application also enables users to track recurring expenses and financial goals."
 cloudinary_slug: 'cloudinary_expenseTracker'
+enable_gallery: true
 links:
   live_url: ""
   github_url: "https://github.com/Mia703/expense-tracker"

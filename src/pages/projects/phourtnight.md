@@ -5,6 +5,7 @@ languages: 'HTML, CSS, JQuery, AJAX, Django'
 date: 'Oc 2022'
 summary: 'Phourtnight was a collaborative final project for my undergraduate degree in computer science. With four other teammates, we developed a full-stack collaborative game for housemates. You can play with any number of people, but the goal is to earn points by completing chores, levelling up, and collecting lootboxes containing rewards . The game is designed to gamify household tasks that roommates would traditionally have to divide and complete.'
 cloudinary_slug: ''
+enable_gallery: false
 links:
     live_url: 'https://youtu.be/EuGNqnLFR6w?si=CWgDF1oSZOpLxiS7'
     github_url: 'https://github.com/LenixC/Anemone'

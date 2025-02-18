@@ -14,6 +14,12 @@ const projects_list = [
     year: 2024,
   },
   {
+    name: 'Shinjuku Omoide',
+    description: 'Designed and developer a WordPress and Elementor website for an upcoming Airbnb rental to engage and inform international guests',
+    link: '/projects/shinjukuomoide',
+    year: 2024,
+  },
+  {
     name: "SAAH Digital Marketing Signs",
     description:
       "Digital and print marketing materials for the School of Art & Art History",

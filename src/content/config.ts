@@ -44,6 +44,13 @@ export const collections = {
       context: true,
     }),
   }),
+  cloudinary_shinjukuOmoide: defineCollection({
+    loader: cldAssetsLoader({
+      folder: "portfolio-projects/shinjuku-omoide",
+      limit: 31,
+      context: true,
+    }),
+  }),
   cloudinary_simplyTasks: defineCollection({
     loader: cldAssetsLoader({
       folder: "portfolio-projects/simply-tasks",

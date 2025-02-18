@@ -2,8 +2,6 @@
 import Gallery from "../components/Gallery.astro";
 import Navigation from "../components/Navigation.astro";
 import Layout from "./Layout.astro";
-import { CldImage } from "astro-cloudinary";
-import { getCollection } from "astro:content";
 
 const { frontmatter } = Astro.props;
 ---
@@ -86,7 +84,10 @@ const { frontmatter } = Astro.props;
 				frontmatter.cloudinary_slug != "" ? (
 					<div class="project-image-wrapper">
 						<h3 class="mb-2">Project Images</h3>
-						<Gallery collection_name={frontmatter.cloudinary_slug} />
+						<Gallery
+							collection_name={frontmatter.cloudinary_slug}
+							enable_gallery={frontmatter.enable_gallery}
+						/>
 					</div>
 				) : (
 					<div />

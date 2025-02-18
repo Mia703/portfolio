@@ -5,6 +5,7 @@ languages: ''
 date: 'Month 2024'
 summary: ''
 cloudinary_slug: ''
+enable_gallery: false
 links:
     live_url: ''
     github_url: ''
